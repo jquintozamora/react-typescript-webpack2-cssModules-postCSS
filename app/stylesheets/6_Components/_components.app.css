@@ -1,5 +1,6 @@
-.component1 {
+.appTitle {
     font-size: 15px;
+    color: red;
 
     & .component {
         top: 1px;

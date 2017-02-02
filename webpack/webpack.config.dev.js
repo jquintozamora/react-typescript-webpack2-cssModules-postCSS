@@ -16,7 +16,13 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
     target: 'web',
     entry: {
-        'bundle': './app/src/index.tsx'
+        'bundle': [
+            // https://github.com/tomduncalf/typescript-react-template
+            'react-hot-loader/patch',
+            'webpack-dev-server/client?http://localhost:3000',
+            'webpack/hot/only-dev-server',
+            './app/src/index.tsx'
+        ]
     },
     output: {
         path: path.join(__dirname, './../dist'),
@@ -48,7 +54,14 @@ module.exports = {
             // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
             {
                 test: /\.ts(x?)$/,
-                loader: 'awesome-typescript-loader',
+                use: [
+                    {
+                        loader: 'react-hot-loader/webpack'
+                    },
+                    {
+                        loader: 'awesome-typescript-loader'
+                    }
+                ],
                 include: path.resolve(__dirname, './../app/src')          // Use include instead exclude to improve the build performance
             },
             {
@@ -62,7 +75,8 @@ module.exports = {
                         loader: 'css-loader',
                         options: {
                             sourceMap: true,
-                            importLoaders: 1 
+                            importLoaders: 1,
+                            minimize: true
                         },
                     },
                     {
