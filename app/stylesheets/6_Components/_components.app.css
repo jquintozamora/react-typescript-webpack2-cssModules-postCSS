@@ -1,0 +1,7 @@
+.component1 {
+    font-size: 15px;
+
+    & .component {
+        top: 1px;
+    }
+}

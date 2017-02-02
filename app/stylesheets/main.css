@@ -1,0 +1,56 @@
+/* 
+    CSS Architecture framework: ITCSS
+
+    Inverted Triangle Cascading Style Sheets
+        1. Settings:    variables, configs
+        2. Tools:       functions. clearfix, hidden, font-size
+        3. Generic:     3rd party, normalize.css, reset, shared, box-sizing
+        4. Base:        bare elements, Unclassed HTML elements (type selectors), Page, Headings, Images, Tables
+        5. Objects:     layout classes, wrapper, layout, media
+        6. Components:  UI Classes
+        7. Trumps:      Overrides, IDs and !important (Rules with high specificity)
+
+    https://github.com/inuitcss/inuitcss
+ */
+
+
+/*
+ * 1. SETTINGS
+ */
+@import "1_Settings/_settings.global.css";
+@import "1_Settings/_settings.breakpoints.css";
+@import "1_Settings/_settings.colors.css";
+
+
+/**
+ * 2. TOOLS
+ */
+
+
+/**
+ * 3. GENERIC
+ */
+@import "3_Generic/_generic.reset.css";
+
+
+/**
+ * 4. BASE
+ */
+
+
+/**
+ * 5. OBJECTS
+ */
+@import "5_Objects/_objects.wrappers.css";
+
+
+/**
+ * 6. COMPONENTS
+ */
+@import "6_Components/_components.app.css";
+
+
+/**
+ * 7. TRUMPS
+ */
+@import "7_Trumps/_trumps.utilities.css";

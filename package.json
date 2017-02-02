@@ -1,0 +1,44 @@
+{
+  "name": "react-typescript-es6-webpack2-postcss",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Jose Quinto Zamora",
+    "email": "quintorel@hotmail.com",
+    "url": "https://blog.josequinto.com"
+  },
+  "description": "",
+  "scripts": {
+    "start": "set NODE_ENV=development && node devServer/server.js",
+    "startHTTPS": "set NODE_ENV=development && node devServer/serverHTTPS.js",
+    "bundle": "set NODE_ENV=production && webpack --progress --config ./webpack/webpack.config.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.9.35",
+    "@types/react": "^15.0.6",
+    "@types/react-dom": "^0.14.22",
+    "autoprefixer": "^6.7.2",
+    "awesome-typescript-loader": "^3.0.0-beta.18",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.2",
+    "opener": "^1.4.2",
+    "path": "^0.12.7",
+    "postcss-import": "^9.1.0",
+    "postcss-loader": "^1.2.2",
+    "postcss-nesting": "^2.3.1",
+    "postcss-simple-vars": "^3.0.0",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "source-map-loader": "^0.1.6",
+    "style-loader": "^0.13.1",
+    "typescript": "^2.1.5",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^1.16.3",
+    "webpack-visualizer-plugin": "^0.1.10"
+  }
+}
