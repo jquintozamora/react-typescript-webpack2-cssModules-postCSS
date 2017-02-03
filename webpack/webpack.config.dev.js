@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-//  WebPack PROD Config for Actions
+//  WebPack 2 PROD Config for Actions
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //  author: Jose Quinto - https://blogs.josequinto.com
 //
-//  More webpack examples: https://github.com/jquintozamora/react-es6-webpack-minimal-starter-template/tree/master/webpack
+//  WebPack 2 Migrating guide: https://webpack.js.org/guides/migrating/
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -47,7 +47,7 @@ module.exports = {
         publicPath: '/',
         
         port: 3000,
-        
+
         historyApiFallback: true,
         
         // All the stats options here: https://webpack.js.org/configuration/stats/

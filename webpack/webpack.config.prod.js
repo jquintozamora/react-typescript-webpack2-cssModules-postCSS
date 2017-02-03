@@ -4,7 +4,7 @@
 //
 //  author: Jose Quinto - https://blogs.josequinto.com
 //
-//  Migrating guide: https://webpack.js.org/guides/migrating/
+//  WebPack 2 Migrating guide: https://webpack.js.org/guides/migrating/
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
