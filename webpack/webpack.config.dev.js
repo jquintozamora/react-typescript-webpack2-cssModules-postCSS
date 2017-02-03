@@ -8,65 +8,97 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-const path = require('path');
+const { resolve } = require('path');
 const webpack = require('webpack');
 
 module.exports = {
     // To enhance the debugging process. More info: https://webpack.js.org/configuration/devtool/
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'inline-source-map',
     target: 'web',
     entry: {
         'bundle': [
-            // https://github.com/tomduncalf/typescript-react-template
+            // activate HMR for React
             'react-hot-loader/patch',
+            // bundle the client for webpack-dev-server
+            // and connect to the provided endpoint   
             'webpack-dev-server/client?http://localhost:3000',
+            // bundle the client for hot reloading
+            // only- means to only hot reload for successful updates
             'webpack/hot/only-dev-server',
+            // Our app main entry            
             './app/src/index.tsx'
         ]
     },
     output: {
-        path: path.join(__dirname, './../dist'),
+        path: resolve(__dirname, '../dist'),
         filename: '[name].js',
+        // necessary for HMR to know where to load the hot update chunks
         publicPath: '/'
     },
+
+    devServer: {
+        // All options here: https://webpack.js.org/configuration/dev-server/
+
+        // enable HMR on the server
+        hot: true,
+        // match the output path
+        contentBase: resolve(__dirname, '../dist'),
+        // match the output `publicPath`
+        publicPath: '/',
+        
+        port: 3000,
+        
+        historyApiFallback: true,
+        
+        // All the stats options here: https://webpack.js.org/configuration/stats/
+        stats: {
+            colors: true, // color is life
+            chunks: false, // this reduces the amount of stuff I see in my terminal; configure to your needs
+            'errors-only': true
+        }
+    },
+
+    context: resolve(__dirname, '../'),
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
         extensions: [".ts", ".tsx", ".js"]
     },
     plugins: [
-        /**
-     * This is where the magic happens! You need this to enable Hot Module Replacement!
-     */
-        new webpack.HotModuleReplacementPlugin()
+        // enable HMR globally
+        new webpack.HotModuleReplacementPlugin(),
+        // prints more readable module names in the browser console on HMR updates
+        new webpack.NamedModulesPlugin()
     ],
     module: {
         // loaders -> rules in webpack 2
         rules: [
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+            // Once TypeScript is configured to output source maps we need to tell webpack 
+            // to extract these source maps and pass them to the browser, 
+            // this way we will get the source file exactly as we see it in our code editor.
             {
                 enforce: 'pre',
                 test: /\.js$/,
                 loader: 'source-map-loader',
-                exclude: [
-                    /node_modules/
-                ]
+                exclude: '/node_modules/'
+            },
+            {
+                enforce: 'pre',
+                test: /\.tsx?$/,
+                use: "source-map-loader",
+                exclude: '/node_modules/'
             },
             // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
             {
                 test: /\.ts(x?)$/,
                 use: [
-                    {
-                        loader: 'react-hot-loader/webpack'
-                    },
-                    {
-                        loader: 'awesome-typescript-loader'
-                    }
+                    { loader: 'react-hot-loader/webpack' },
+                    { loader: 'awesome-typescript-loader' }
                 ],
-                include: path.resolve(__dirname, './../app/src')          // Use include instead exclude to improve the build performance
+                include: resolve(__dirname, './../app/src')
             },
             {
                 test: /\.css$/i,
-                include: path.resolve(__dirname, './../app/stylesheets'),  // Use include instead exclude to improve the build performance
+                include: resolve(__dirname, './../app/stylesheets'),
                 use: [
                     {
                         loader: 'style-loader'
@@ -98,13 +130,5 @@ module.exports = {
                 ]
             }
         ]
-    },
-    // When importing a module whose path matches one of the following, just
-    // assume a corresponding global variable exists and use that instead.
-    // This is important because it allows us to avoid bundling all of our
-    // dependencies, which allows browsers to cache those libraries between builds.
-    // externals: {
-    //     "react": "React",
-    //     "react-dom": "ReactDOM"
-    // }
+    }
 };

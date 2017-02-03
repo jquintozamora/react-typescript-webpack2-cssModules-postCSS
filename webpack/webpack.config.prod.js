@@ -1,14 +1,14 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-//  WebPack PROD Config for Actions
+//  WebPack 2 PROD Config for Actions
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //  author: Jose Quinto - https://blogs.josequinto.com
 //
-//  More webpack examples: https://github.com/jquintozamora/react-es6-webpack-minimal-starter-template/tree/master/webpack
+//  Migrating guide: https://webpack.js.org/guides/migrating/
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-const path = require('path');
+const { resolve } = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
@@ -17,8 +17,9 @@ module.exports = {
     entry: {
         'bundle': './app/src/index.tsx'
     },
+    context: resolve(__dirname, '../'),
     output: {
-        path: path.join(__dirname, './../dist'),
+        path: resolve(__dirname, './../dist'),
         filename: '[name].js',
         publicPath: '/'
     },
@@ -68,7 +69,8 @@ module.exports = {
             },
 
         }),
-        new webpack.optimize.OccurrenceOrderPlugin(),
+        // Included by default in webpack 2
+        // new webpack.optimize.OccurrenceOrderPlugin(), 
         new webpack.optimize.AggressiveMergingPlugin()
     ],
     module: {
@@ -80,7 +82,7 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'source-map-loader',
                 exclude: [
-                    /node_modules/
+                    '/node_modules/'
                 ]
             },
             // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
@@ -91,13 +93,12 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                include: path.resolve(__dirname, './../app/stylesheets'),  // Use include instead exclude to improve the build performance
+                include: resolve(__dirname, './../app/stylesheets'),  // Use include instead exclude to improve the build performance
                 use: ExtractTextPlugin.extract({
                     //fallback: 'style-loader',
                     fallbackLoader: 'style-loader',
                     //use: [
                     loader: [
-                        
                         {
                             loader: 'css-loader',
                             options: { 

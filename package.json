@@ -9,8 +9,7 @@
   },
   "description": "",
   "scripts": {
-    "start": "set NODE_ENV=development && node devServer/server.js",
-    "startHTTPS": "set NODE_ENV=development && node devServer/serverHTTPS.js",
+    "start": "set NODE_ENV=development && webpack-dev-server --open --config ./webpack/webpack.config.dev.js",
     "bundle": "set NODE_ENV=production && webpack --progress --config ./webpack/webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,7 +27,6 @@
     "awesome-typescript-loader": "^3.0.0-beta.18",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.2",
-    "opener": "^1.4.2",
     "path": "^0.12.7",
     "postcss-import": "^9.1.0",
     "postcss-loader": "^1.2.2",
@@ -39,7 +37,7 @@
     "style-loader": "^0.13.1",
     "typescript": "^2.1.5",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^1.16.3",
+    "webpack-dev-server": "^2.2.1",
     "webpack-visualizer-plugin": "^0.1.10"
   }
 }
