@@ -20,12 +20,12 @@ module.exports = {
             // activate HMR for React
             'react-hot-loader/patch',
             // bundle the client for webpack-dev-server
-            // and connect to the provided endpoint   
+            // and connect to the provided endpoint
             'webpack-dev-server/client?http://localhost:3000',
             // bundle the client for hot reloading
             // only- means to only hot reload for successful updates
             'webpack/hot/only-dev-server',
-            // Our app main entry            
+            // Our app main entry
             './app/src/index.tsx'
         ]
     },
@@ -45,11 +45,11 @@ module.exports = {
         contentBase: resolve(__dirname, '../dist'),
         // match the output `publicPath`
         publicPath: '/',
-        
+
         port: 3000,
 
         historyApiFallback: true,
-        
+
         // All the stats options here: https://webpack.js.org/configuration/stats/
         stats: {
             colors: true, // color is life
@@ -72,8 +72,8 @@ module.exports = {
     module: {
         // loaders -> rules in webpack 2
         rules: [
-            // Once TypeScript is configured to output source maps we need to tell webpack 
-            // to extract these source maps and pass them to the browser, 
+            // Once TypeScript is configured to output source maps we need to tell webpack
+            // to extract these source maps and pass them to the browser,
             // this way we will get the source file exactly as we see it in our code editor.
             {
                 enforce: 'pre',

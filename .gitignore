@@ -1,12 +1,10 @@
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
+# OS X
+.DS_Store
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-dist/bundle.js*
-
-# Dependency directories
+# Node
 node_modules
-
-# Optional npm cache directory
-.npm
 npm-debug.log*
+
+# Build
+dist/bundle.js*
+dist/main.css*

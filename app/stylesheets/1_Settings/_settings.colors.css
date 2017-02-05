@@ -1,6 +1,6 @@
-/*------------------------------------*\
-  SETTINGS-COLORS
-\*------------------------------------*/
+/*
+ * SETTINGS-COLORS
+ */
 
 /* Global Navigation Colors */
 $globalNavBackground: #f3f3f3;
@@ -14,14 +14,12 @@ $groupMenuSecondLevelColor: #666;
 /*
   * Primary colors
   */
-$primaryBackground: #81D0AE;
-$primaryText: #09A25F;
-
-
+$primaryBackground: #81d0ae;
+$primaryText: #09a25f;
 
 /*
-  * Black and white
-  */
+ * Black and white
+ */
 $black: #000;
 $white: #fff;
 

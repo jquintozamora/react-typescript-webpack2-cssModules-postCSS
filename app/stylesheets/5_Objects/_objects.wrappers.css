@@ -18,11 +18,10 @@ body {
 }
 
 .pageHeader {
-
     height: $headerHeight;
 
-    /*border: 1px solid black;*/
-    margin: 5px 5px;
+    /* stylelint-disable border: 1px solid black; */
+    margin: 5px;
     background-color: white;
 
     &__TitleNav {
@@ -38,30 +37,27 @@ body {
         /* Text Vertical Alignemnt inside Div */
         line-height: 60px;
         vertical-align: middle;
-
         background-color: silver;
-
     }
 
     &__Title {
         font-size: 20px;
         text-align: left;
         padding-left: 13px;
+
         /* Text Vertical Alignemnt inside Div */
         line-height: 30px;
         vertical-align: middle;
     }
-
 }
 
 .globalNavContainer {
-    /*border: 1px solid black;*/
-    margin: 5px 5px;
-    
+    /* border: 1px solid black; */
+    margin: 5px;
+
     /* Text Vertical Alignemnt inside Div */
     max-height: 30px;
     height: 30px;
-
 }
 
 .menu {
@@ -71,7 +67,6 @@ body {
 }
 
 .content {
-    /*border: 1px solid black;*/
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
@@ -84,13 +79,12 @@ body {
 
     &__Body {
         margin-top: 5px;
-        padding: 10px 10px;
+        padding: 10px;
         text-align: left;
     }
-
 }
 
 .footer {
     border: 1px solid black;
-    margin: 5px 5px;
+    margin: 5px;
 }

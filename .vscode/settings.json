@@ -1,0 +1,9 @@
+// Coloque su configuración en este archivo para sobrescribir la configuración predeterminada y de usuario.
+// PostCSS validation using stylelint: https://github.com/Microsoft/vscode/issues/3907
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "vsicons.presets.angular": false,
+  "tslint.enable": true,
+  "css.validate": false,
+  "stylelint.enable": true
+}

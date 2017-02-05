@@ -1,10 +1,16 @@
 {
     "compilerOptions": {
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "module": "commonjs",
+        "experimentalDecorators": true,
         "target": "es5",
+        "module": "commonjs",
         "jsx": "react",
+        "sourceMap": true,
+        "alwaysStrict": true,
+        "declaration": false,
+        "noImplicitAny": true,
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
         "types": [
             "node",
             "react",

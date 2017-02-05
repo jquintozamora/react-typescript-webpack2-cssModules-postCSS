@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-//  WebPack 2 PROD Config for Actions
+//  WebPack 2 PROD Config
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //  author: Jose Quinto - https://blogs.josequinto.com
@@ -35,12 +35,12 @@ module.exports = {
             'DEBUG': false,                                 // Doesn´t have effect on my example
             '__DEVTOOLS__': false                           // Doesn´t have effect on my example
         }),
-        new ExtractTextPlugin({ 
-            filename: '../dist/main.css', 
+        new ExtractTextPlugin({
+            filename: '../dist/main.css',
             allChunks: true
         }),
         // Plugings for optimizing size and performance.
-        // Here you have all the available by now: 
+        // Here you have all the available by now:
         //    Webpack 1. https://github.com/webpack/webpack/blob/v1.13.3/lib/optimize
         //    Webpack 2. https://github.com/webpack/webpack/tree/master/lib/optimize
         new webpack.optimize.UglifyJsPlugin({
@@ -70,7 +70,7 @@ module.exports = {
 
         }),
         // Included by default in webpack 2
-        // new webpack.optimize.OccurrenceOrderPlugin(), 
+        // new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.AggressiveMergingPlugin()
     ],
     module: {
@@ -94,15 +94,15 @@ module.exports = {
             {
                 test: /\.css$/i,
                 include: resolve(__dirname, './../app/stylesheets'),  // Use include instead exclude to improve the build performance
-                use: ExtractTextPlugin.extract({
+                loader: ExtractTextPlugin.extract({
                     //fallback: 'style-loader',
                     fallbackLoader: 'style-loader',
                     //use: [
                     loader: [
                         {
                             loader: 'css-loader',
-                            options: { 
-                                sourceMap: true, 
+                            options: {
+                                sourceMap: true,
                                 importLoaders: 1,
                                 minimize: true
                             }
