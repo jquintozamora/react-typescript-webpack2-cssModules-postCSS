@@ -1,8 +1,8 @@
 .appTitle {
-    font-size: 15px;
-    color: black;
+  font-size: 15px;
+  color: black;
 
-    & .component {
-        top: 1px;
-    }
+  & .component {
+    top: 1px;
+  }
 }

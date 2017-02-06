@@ -17,9 +17,9 @@
 /*
  * 1. SETTINGS
  */
-@import "1_Settings/_settings.global.css";
-@import "1_Settings/_settings.breakpoints.css";
-@import "1_Settings/_settings.colors.css";
+@import '1_Settings/_settings.global.css';
+@import '1_Settings/_settings.breakpoints.css';
+@import '1_Settings/_settings.colors.css';
 
 
 /**
@@ -30,7 +30,7 @@
 /**
  * 3. GENERIC
  */
-@import "3_Generic/_generic.reset.css";
+@import '3_Generic/_generic.reset.css';
 
 
 /**
@@ -41,16 +41,16 @@
 /**
  * 5. OBJECTS
  */
-@import "5_Objects/_objects.wrappers.css";
+@import '5_Objects/_objects.wrappers.css';
 
 
 /**
  * 6. COMPONENTS
  */
-@import "6_Components/_components.app.css";
+@import '6_Components/_components.app.css';
 
 
 /**
  * 7. TRUMPS
  */
-@import "7_Trumps/_trumps.utilities.css";
+@import '7_Trumps/_trumps.utilities.css';

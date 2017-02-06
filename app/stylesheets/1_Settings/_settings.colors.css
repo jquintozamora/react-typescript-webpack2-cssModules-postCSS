@@ -5,11 +5,11 @@
 /* Global Navigation Colors */
 $globalNavBackground: #f3f3f3;
 $globalNavBorder: #e7e7e7;
-$globalNavColor: #666;
-$globalNavBackgroundHover: #ddd;
+$globalNavColor: #666666;
+$globalNavBackgroundHover: #dddddd;
 $globalNavGroupMenuBackground: white;
-$globalNavGroupMenuBorder: #ccc;
-$groupMenuSecondLevelColor: #666;
+$globalNavGroupMenuBorder: #cccccc;
+$groupMenuSecondLevelColor: #666666;
 
 /*
   * Primary colors
@@ -20,6 +20,6 @@ $primaryText: #09a25f;
 /*
  * Black and white
  */
-$black: #000;
-$white: #fff;
+$black: #000000;
+$white: #ffffff;
 
