@@ -1,6 +1,6 @@
 {
   "name": "react-typescript-es6-webpack2-postcss",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": {
     "name": "Jose Quinto Zamora",
@@ -10,6 +10,7 @@
   "description": "",
   "scripts": {
     "start": "set NODE_ENV=development && webpack-dev-server --open --config ./webpack/webpack.config.dev.js",
+    "prebundle": "npm install",
     "bundle": "set NODE_ENV=production && webpack --progress --config ./webpack/webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,10 +29,10 @@
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.2",
     "path": "^0.12.7",
+    "postcss-custom-properties": "^5.0.2",
     "postcss-import": "^9.1.0",
     "postcss-loader": "^1.2.2",
     "postcss-nesting": "^2.3.1",
-    "postcss-simple-vars": "^3.0.0",
     "react-hot-loader": "^3.0.0-beta.3",
     "source-map-loader": "^0.1.6",
     "style-loader": "^0.13.1",

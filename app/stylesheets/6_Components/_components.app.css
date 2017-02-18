@@ -1,8 +1,4 @@
-.appTitle {
+.commonComponentClass {
   font-size: 15px;
   color: black;
-
-  & .component {
-    top: 1px;
-  }
 }

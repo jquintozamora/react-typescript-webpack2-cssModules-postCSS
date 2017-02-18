@@ -30,8 +30,9 @@
 /**
  * 3. GENERIC
  */
+/*
 @import '3_Generic/_generic.reset.css';
-
+*/
 
 /**
  * 4. BASE
@@ -46,6 +47,8 @@
 
 /**
  * 6. COMPONENTS
+ *  NOTE: On this project, we decided to use CSS-Modules for components,
+ *        Then, every React component will have Component.module.css under its folder
  */
 @import '6_Components/_components.app.css';
 

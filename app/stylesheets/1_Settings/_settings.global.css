@@ -5,9 +5,7 @@
 /*
   * Set your font
   */
-$fontDefault: -apple-system, BlinkMacSystemFont, Segoe UI, Arial, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-
-$maxResponsiveMenuHeight: 1000px;
-
-$headerHeight: 60px;
+:root {
+  --fontDefault: Arial, Verdana, helvetica, clean, sans-serif;
+}
 

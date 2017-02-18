@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-//  WebPack 2 PROD Config for Actions
+//  WebPack 2 PROD Config
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //  author: Jose Quinto - https://blogs.josequinto.com
@@ -46,8 +46,10 @@ module.exports = {
         // match the output `publicPath`
         publicPath: '/',
 
-        port: 3000,
+        // Enable to integrate with Docker
+        //host:"0.0.0.0",
 
+        port: 3000,
         historyApiFallback: true,
 
         // All the stats options here: https://webpack.js.org/configuration/stats/
@@ -69,6 +71,9 @@ module.exports = {
         // prints more readable module names in the browser console on HMR updates
         new webpack.NamedModulesPlugin()
     ],
+    watchOptions: {
+       poll: true
+    },
     module: {
         // loaders -> rules in webpack 2
         rules: [
@@ -120,9 +125,45 @@ module.exports = {
                                     //addDependencyTo: webpack // Must be first item in list
                                 }),
                                 require("postcss-nesting")(),  // Following CSS Nesting Module Level 3: http://tabatkins.github.io/specs/css-nesting/
-                                require("postcss-simple-vars")(),
+                                require("postcss-custom-properties")(),
                                 require("autoprefixer")({
                                     browsers: ['last 2 versions', 'ie >= 9'] //https://github.com/ai/browserslist
+                                })
+                            ])
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.css$/i,
+                exclude: [/node_modules/],
+                include: resolve(__dirname, './../app/src'),
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
+                            importLoaders: 1,
+                            modules: true,
+                            camelCase: true,
+                            localIdentName: '[name]_[local]_[hash:base64:5]',
+                            minimize: false
+                        },
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: () => ([
+                                require("postcss-import")(),
+                                // Following CSS Nesting Module Level 3: http://tabatkins.github.io/specs/css-nesting/
+                                require("postcss-nesting")(),
+                                require("postcss-custom-properties")(),
+                                //https://github.com/ai/browserslist
+                                require("autoprefixer")({
+                                    browsers: ['last 2 versions', 'ie >= 9']
                                 })
                             ])
                         }

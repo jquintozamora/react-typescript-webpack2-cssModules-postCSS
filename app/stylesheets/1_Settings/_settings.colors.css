@@ -2,24 +2,10 @@
  * SETTINGS-COLORS
  */
 
-/* Global Navigation Colors */
-$globalNavBackground: #f3f3f3;
-$globalNavBorder: #e7e7e7;
-$globalNavColor: #666666;
-$globalNavBackgroundHover: #dddddd;
-$globalNavGroupMenuBackground: white;
-$globalNavGroupMenuBorder: #cccccc;
-$groupMenuSecondLevelColor: #666666;
-
 /*
   * Primary colors
   */
-$primaryBackground: #81d0ae;
-$primaryText: #09a25f;
-
-/*
- * Black and white
- */
-$black: #000000;
-$white: #ffffff;
-
+:root {
+  --primaryBackground: #81d0ae;
+  --primaryText: #09a25f;
+}
