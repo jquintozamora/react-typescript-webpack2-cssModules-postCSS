@@ -6,7 +6,7 @@
         "jsx": "react",
         "sourceMap": true,
         "alwaysStrict": true,
-        "declaration": false,
+        "declaration": true,
         "noImplicitAny": true,
         "typeRoots": [
             "./node_modules/@types"

@@ -51,7 +51,6 @@ module.exports = {
 
         port: 3000,
         historyApiFallback: true,
-
         // All the stats options here: https://webpack.js.org/configuration/stats/
         stats: {
             colors: true, // color is life

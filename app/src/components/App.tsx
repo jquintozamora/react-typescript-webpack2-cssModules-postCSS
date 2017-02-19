@@ -4,11 +4,9 @@ import * as React from "react";
 const styles: any = require("./App.module.css");
 /* tslint:enable:no-var-requires */
 
-interface IAppProps {
-    name?: string;
-}
+import { IAppProps } from "./IAppProps";
 
-export default class App extends React.Component<IAppProps, any> {
+export default class App extends React.Component<IAppProps, {}> {
     public static defaultProps: IAppProps = {
         name: "TypeScript with React, CSS Modules and HMR (Hot Module Replacement)."
     };
