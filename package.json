@@ -25,9 +25,9 @@
     "@types/react": "^15.0.6",
     "@types/react-dom": "^0.14.22",
     "autoprefixer": "^6.7.2",
-    "awesome-typescript-loader": "^3.0.0-beta.18",
+    "awesome-typescript-loader": "^3.0.7",
     "css-loader": "^0.26.1",
-    "extract-text-webpack-plugin": "^2.0.0-rc.2",
+    "extract-text-webpack-plugin": "^2.0.0",
     "path": "^0.12.7",
     "postcss-custom-properties": "^5.0.2",
     "postcss-import": "^9.1.0",
@@ -41,7 +41,7 @@
     "tslint-react": "^2.3.0",
     "typescript": "^2.1.5",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.2.1",
+    "webpack-dev-server": "^2.4.1",
     "webpack-visualizer-plugin": "^0.1.10"
   }
 }
