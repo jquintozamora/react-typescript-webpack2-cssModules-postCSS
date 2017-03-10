@@ -24,6 +24,7 @@ export const ViewerItemCardTypeStyles = (props: ViewerItemCardType) => {
                 padding: 10,
                 fontFamily: "sans-serif",
                 fontSize: props.titleFontSize,
+                height: props.titleMinHeight
             },
             a: {
                 color: '#db0000',
@@ -35,14 +36,16 @@ export const ViewerItemCardTypeStyles = (props: ViewerItemCardType) => {
             padding: '0px 10px',
             fontFamily: "sans-serif",
             fontSize: props.summaryFontSize,
-            color: '#555555'
+            color: '#555555',
+            height: props.dateMinHeight
         },
         summary: {
             verticalAlign: "top",
             padding: 10,
             fontFamily: "sans-serif",
             fontSize: props.summaryFontSize,
-            color: '#555555'
+            color: '#555555',
+            height: props.summaryMinHeight
         }
     };
 }
