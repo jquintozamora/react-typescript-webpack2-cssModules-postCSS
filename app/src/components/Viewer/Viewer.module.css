@@ -1,0 +1,23 @@
+.container {
+  max-width: 1280px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.commom {
+  text-align: left;
+  float: left;
+  margin: 15px 15px;
+}
+
+.big {
+  composes: commom;
+}
+
+.medium {
+  composes: commom;
+}
+
+.small {
+  composes: commom;
+}

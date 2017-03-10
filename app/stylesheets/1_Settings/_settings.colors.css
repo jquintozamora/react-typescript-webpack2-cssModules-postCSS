@@ -7,5 +7,9 @@
   */
 :root {
   --primaryBackground: #81d0ae;
-  --primaryText: #09a25f;
+  --primaryText: black;
+  --white: white;
+  --black: black;
+  --cardBorder: silver;
+  --textBackGround: #f4f4f4;
 }

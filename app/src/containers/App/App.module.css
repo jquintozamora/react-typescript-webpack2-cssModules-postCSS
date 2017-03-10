@@ -1,0 +1,7 @@
+@import "../../../stylesheets/1_Settings/_settings.colors.css";
+
+.title {
+  color: var(--primaryText);
+  font-size: 35px;
+  text-align: center;
+}

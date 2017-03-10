@@ -18,7 +18,7 @@ import "./../stylesheets/main.css";
 /*
   Main App Container
  */
-import App from "./components/App";
+import App from "./containers/App/App";
 
 // Render function containing the HMR AppContainer
 const render = (Component: any) => {
@@ -37,10 +37,10 @@ render(App);
 declare var module: { hot: any };
 // Hot Module Replacement API
 if (module.hot) {
-    module.hot.accept("./components/App", () => {
+    module.hot.accept("./containers/App/App", () => {
         // If we receive a HMR request for our App container,
         // then reload it using require (we can't do this dynamically with import)
-        const NextApp = require("./components/App").default;
+        const NextApp = require("./containers/App/App").default;
         render(NextApp);
     });
 }
