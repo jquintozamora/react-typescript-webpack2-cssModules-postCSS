@@ -91,12 +91,12 @@ module.exports = {
                 use: "source-map-loader",
                 exclude: '/node_modules/'
             },
-            // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+            // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
             {
                 test: /\.ts(x?)$/,
                 use: [
                     { loader: 'react-hot-loader/webpack' },
-                    { loader: 'awesome-typescript-loader' }
+                    { loader: 'ts-loader' }
                 ],
                 include: resolve(__dirname, './../app/src')
             },
