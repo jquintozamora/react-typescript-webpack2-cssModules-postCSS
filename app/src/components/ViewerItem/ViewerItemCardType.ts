@@ -1,12 +1,12 @@
 /**
- * defines the ViewerItemCardType singleton constants
+ * defines the Factory ViewerItemCardType singleton constants
  */
 export class ViewerItemCardType {
     public static Big: ViewerItemCardType = new ViewerItemCardType(1, "FeaturedBig", 330, 660, 110, 160, 21, 16, 68, 18, 58);
     public static Medium: ViewerItemCardType = new ViewerItemCardType(2, "FeaturedSmall", 155, 310, 50, 125, 20, 14, 66, 16, 68);
     public static Small: ViewerItemCardType = new ViewerItemCardType(3, "NormalArticle", 100, 200, 35, 115, 18, 12, 62, 14, 75);
 
-    constructor(
+    private constructor(
         public id: number,
         public name: string,
         public imageHeight: number,
