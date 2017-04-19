@@ -14,7 +14,7 @@ Use this Starter template to create quickly first scaffolding for your SPA proje
          - [UglifyJsPlugin with options](https://github.com/webpack/webpack/blob/v2.4.1/lib/optimize/UglifyJsPlugin.js)
          - Use include in the loader instead of the exclude. [More info](http://stackoverflow.com/questions/37823764/how-include-and-exclude-works-in-webpack-loader)
          - More perfomance tips: [here](https://medium.com/@khanght/optimize-webpack-production-build-ec594242b222#.bj3eyg65p)
-    - Webpack stats (bundle optimization helper)
+    - [Webpack stats](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/webpack/webpack.config.stats.js) (bundle optimization helper)
         - Generate stats.json file with profiler. Use (this tool)[http://webpack.github.io/analyse/] to analyze it.
         - [webpack visualizer](https://chrisbateman.github.io/webpack-visualizer/)
 - [EditorConfig](http://editorconfig.org/)
@@ -82,7 +82,31 @@ $ code .
 $ npm run start
 ```
 
-### Done!
+### Build for production
+```
+$ npm run build
+```
+
+### Generate Stats (it stores the html file with the stats under webpack/stats folder)
+```
+$ npm run stats
+```
+You will see the stats:
+![webpackvisualizer](./assets/webpackvisualizer.png)
+
+### Enjoy!
+
+## Usefull demo
+As part of the boilerplate, you will see a fancy demo app with two react components already created:
+- Viewer
+  - [Stateless component](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/Viewer/Viewer.tsx) (no state)
+  - Use [CSS-Modules](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/Viewer/Viewer.module.css)
+- ViewerItem
+  - Create [3 types of Item Card object](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItemCardType.ts) (singleton, factory static)
+  - Use [inlined css using a function to assign CSS depending on the object](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItem.inlined.css.ts)
+  - Render [Table layout compatible with emails](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItem.tsx)
+
+![demoapp](./assets/demoapp.png)
 
 
 ## License
