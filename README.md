@@ -92,7 +92,7 @@ $ npm run build
 $ npm run stats
 ```
 You will see the stats:
-![webpackvisualizer](./assets/webpackvisualizer.png)
+![webpackvisualizer](./assets/webpackvisualizer.png =400x)
 
 ### Enjoy!
 
