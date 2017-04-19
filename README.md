@@ -4,17 +4,36 @@ Use this Starter template to create quickly first scaffolding for your SPA proje
 ## Features
 - [React](https://facebook.github.io/react)
 - [TypeScript](https://www.typescriptlang.org) (compiling directly to ES5)
+  - Using [@types instead of TSD or typings folder](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/tsconfig.json#L14)
+- [Hot Module Replacement](https://medium.com/@dan_abramov/hot-reloading-in-react-1140438583bf#.xh6v0ht7j) ([React Hot Loader 3](https://github.com/gaearon/react-hot-loader/issues/243))
 - [Webpack 2](https://webpack.js.org)
-- EditorConfig
+    - [Webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
+    - [Webpack configuration for HMR](https://webpack.js.org/concepts/hot-module-replacement/)
+    - Webpack production configuration
+         - Split out css files using [ExtractTextPlugin](https://webpack.js.org/plugins/extract-text-webpack-plugin)
+         - [UglifyJsPlugin with options](https://github.com/webpack/webpack/blob/v2.4.1/lib/optimize/UglifyJsPlugin.js)
+         - Use include in the loader instead of the exclude. [More info](http://stackoverflow.com/questions/37823764/how-include-and-exclude-works-in-webpack-loader)
+         - More perfomance tips: [here](https://medium.com/@khanght/optimize-webpack-production-build-ec594242b222#.bj3eyg65p)
+    - Webpack stats (bundle optimization helper)
+        - Generate stats.json file with profiler. Use (this tool)[http://webpack.github.io/analyse/] to analyze it.
+        - [webpack visualizer](https://chrisbateman.github.io/webpack-visualizer/)
+- [EditorConfig](http://editorconfig.org/)
 - Styling
-  - General Styling:
-      - Methodology: ITCSS
-      - Tools: postCSS with import, nesting, custom properties and autoprefixer.
-  - Components Styling:
-      - CSS Modules + postCSS (import, nesting, custom properties and autoprefixer).
+  - General Styling (app/stylesheets):
+      - To include variables, generic CSS, normalize, reset, type selectors, ...
+      - Methodology: [ITCSS](http://itcss.io)
+      - Tools: [postCSS](http://postcss.org) with [import](https://github.com/postcss/postcss-import), [nesting](https://www.npmjs.com/package/postcss-nesting), [custom properties](https://github.com/postcss/postcss-custom-properties) and [autoprefixer](https://github.com/postcss/autoprefixer).
+  - Components Styling (app/src/components/...):
+      - To be the module's CSS
+      - Techniques: [CSS Modules](https://github.com/css-modules/css-modules) + [postCSS](http://postcss.org) ([import](https://github.com/postcss/postcss-import), [nesting](https://www.npmjs.com/package/postcss-nesting), [custom properties](https://github.com/postcss/postcss-custom-properties) and [autoprefixer](https://github.com/postcss/autoprefixer)).
 - Linting
-  - TSLint: general rules + react rules
-  - Stylint: CSS rules
+  - TypeScript:
+    - [TSLint](https://palantir.github.io/tslint): general rules + [react rules](https://github.com/palantir/tslint-react)
+    - [VS Code TSLint extension](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
+  - Styles
+    - [Stylint](https://stylelint.io): CSS rules
+      - Rules are on .stylelintrc.json
+      - [All the rules](https://stylelint.io/user-guide/rules)
     - Install VS Code extensions:
         - [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
         - [stylefmt](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-stylefmt)
@@ -22,8 +41,7 @@ Use this Starter template to create quickly first scaffolding for your SPA proje
           - Be sure you have these configurations on your .vscode/settings.json:
               - "css.validate": false,
               - "stylelint.enable": true
-    - Rules are on .stylelintrc.json
-    - [All the rules](https://stylelint.io/user-guide/rules)
+
 
 
 
@@ -68,15 +86,32 @@ $ npm run start
 
 
 ## License
-(The MIT License) Copyright (c) 2017 Jose Quinto (https://blog.josequinto.com)
+BSD 3-Clause License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'),
-to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Copyright (c) 2017, [José Quinto](https://blog.josequinto.com)
+All rights reserved.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

@@ -2,7 +2,7 @@
 //  WebPack 2 PROD Config
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//  author: Jose Quinto - https://blogs.josequinto.com
+//  author: Jose Quinto - https://blog.josequinto.com
 //
 //  WebPack 2 Migrating guide: https://webpack.js.org/guides/migrating/
 //

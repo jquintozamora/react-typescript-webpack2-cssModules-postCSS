@@ -3,7 +3,6 @@
  * TODO:
  *  Check: https://codepen.io/ImagineProgramming/pen/GZMXWe?editors=0010#0
  *  Singleton: https://basarat.gitbooks.io/typescript/docs/tips/singleton.html
- *  https://codereview.stackexchange.com/questions/161147/typescript-what-is-the-design-pattern-used-on-this-code
  */
 export class ViewerItemCardType {
     public static Big: ViewerItemCardType = new ViewerItemCardType(1, "FeaturedBig", 330, 660, 110, 160, 21, 16, 68, 18, 58);
