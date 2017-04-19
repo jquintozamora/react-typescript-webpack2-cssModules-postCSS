@@ -92,7 +92,6 @@ $ npm run build
 $ npm run stats
 ```
 You will see the stats:
-![webpackvisualizer](./assets/webpackvisualizer.png =400x)
 <img src="./assets/webpackvisualizer.png" width="400">
 
 ### Enjoy!
