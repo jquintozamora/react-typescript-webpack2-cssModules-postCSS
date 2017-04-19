@@ -97,14 +97,14 @@ You will see the stats:
 
 ### Enjoy!
 
-## Usefull demo
+## Useful demo
 As part of the boilerplate, you will see a fancy demo app with two react components already created:
 - Viewer
   - [Stateless component](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/Viewer/Viewer.tsx) (no state)
   - Use [CSS-Modules](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/Viewer/Viewer.module.css)
 - ViewerItem
   - Create [3 types of Item Card object](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItemCardType.ts) (singleton, factory static)
-  - Use [inlined css using a function to assign CSS depending on the object](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItem.inlined.css.ts)
+  - Use [inline css using a function to assign CSS depending on the object](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItem.inlined.css.ts)
   - Render [Table layout compatible with emails](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItem.tsx)
 
 ![demoapp](./assets/demoapp.png)
