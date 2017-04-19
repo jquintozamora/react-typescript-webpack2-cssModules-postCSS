@@ -92,6 +92,7 @@ $ npm run build
 $ npm run stats
 ```
 You will see the stats:
+<br />
 <img src="./assets/webpackvisualizer.png" width="400">
 
 ### Enjoy!
