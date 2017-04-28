@@ -48,7 +48,7 @@ If you like to don't forget to ★ on Github.
 
 ## Getting Started
 ### Install pre-requisites
-- Node.js and NPM: [Download and install](https://nodejs.org/). *I have version 6.6.0 of Node and 3.10.6 of NPM on Windows PC*
+- Node.js and NPM: [Download and install](https://nodejs.org/). *I have version 7.9.0 of Node and 4.5.0 of NPM on Windows PC*
 - Git: [Download and install](https://git-scm.com/). *I have version 2.7.4 installed on Windows PC*
 
 ### Clone Repo
