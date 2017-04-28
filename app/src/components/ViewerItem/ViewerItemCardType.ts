@@ -21,5 +21,5 @@ export class ViewerItemCardType {
         public titleMinHeight: number,
         public dateMinHeight: number,
         public summaryMinHeight: number
-    ) { };
+    ) { }
 }

@@ -9,7 +9,7 @@
   },
   "description": "",
   "scripts": {
-    "start": "set NODE_ENV=development && webpack-dev-server --open --config ./webpack/webpack.config.dev.js",
+    "start": "set NODE_ENV=development && tsc && webpack-dev-server --open --config ./webpack/webpack.config.dev.js",
     "prebuild": "npm install",
     "build": "set NODE_ENV=production && webpack --progress --config ./webpack/webpack.config.prod.js",
     "stats": "set NODE_ENV=production && webpack --progress --config ./webpack/webpack.config.stats.js --profile --json > ./webpack/stats/stats.json"
@@ -37,7 +37,7 @@
     "ts-loader": "2.0.3",
     "tslint": "5.1.0",
     "tslint-react": "2.6.0",
-    "typescript": "2.2.2",
+    "typescript": "2.3.1",
     "webpack": "2.4.1",
     "webpack-dev-server": "2.4.2",
     "webpack-visualizer-plugin": "0.1.11"

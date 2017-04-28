@@ -3,9 +3,12 @@ import ViewerItem from "../ViewerItem/ViewerItem";
 
 /* tslint:disable:no-var-requires */
 const styles: any = require("./Viewer.module.css");
+
+// Since TypeScript 2.3 it doesn´t import ViewerItemCardType on this way we need to use require
+// import {ViewerItemCardType} from "../ViewerItem/ViewerItemCardType";
+const cardType = require("../ViewerItem/ViewerItemCardType");
 /* tslint:enable:no-var-requires */
 
-import { ViewerItemCardType } from "../ViewerItem/ViewerItemCardType";
 import { IViewerProps } from "./IViewerProps";
 
 class Viewer extends React.Component<IViewerProps, {}> {
@@ -15,15 +18,14 @@ class Viewer extends React.Component<IViewerProps, {}> {
         return (
             <section id={id} className={styles.container} >
                 <div className={styles.big}>
-                    <ViewerItem {...article} typeSingleton={ViewerItemCardType.Big} />
+                    <ViewerItem {...article} typeSingleton={cardType.ViewerItemCardType.Big} />
                 </div>
                 <div className={styles.medium}>
-                    <ViewerItem {...article} typeSingleton={ViewerItemCardType.Medium} />
+                    <ViewerItem {...article} typeSingleton={cardType.ViewerItemCardType.Medium} />
                 </div>
                 <div className={styles.small}>
-                    <ViewerItem {...article} typeSingleton={ViewerItemCardType.Small} />
+                    <ViewerItem {...article} typeSingleton={cardType.ViewerItemCardType.Small} />
                 </div>
-
             </section>
         );
     }
