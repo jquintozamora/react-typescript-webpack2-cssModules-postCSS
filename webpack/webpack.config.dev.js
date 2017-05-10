@@ -67,11 +67,15 @@ module.exports = {
     plugins: [
         // enable HMR globally
         new webpack.HotModuleReplacementPlugin(),
+
         // prints more readable module names in the browser console on HMR updates
-        new webpack.NamedModulesPlugin()
+        new webpack.NamedModulesPlugin(),
+
+        // do not emit compiled assets that include errors
+        new webpack.NoEmitOnErrorsPlugin()
     ],
     watchOptions: {
-       poll: true
+        poll: true
     },
     module: {
         // loaders -> rules in webpack 2

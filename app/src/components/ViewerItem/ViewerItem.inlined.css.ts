@@ -48,4 +48,4 @@ export const ViewerItemCardTypeStyles = (props: ViewerItemCardType) => {
             height: props.summaryMinHeight
         }
     };
-}
+};
