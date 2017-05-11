@@ -23,8 +23,7 @@ var ViewerItem_1 = require("../ViewerItem/ViewerItem");
 /* tslint:disable:no-var-requires */
 var styles = require("./Viewer.module.css");
 // Since TypeScript 2.3 it doesn´t import ViewerItemCardType on this way we need to use require
-// import {ViewerItemCardType} from "../ViewerItem/ViewerItemCardType";
-var cardType = require("../ViewerItem/ViewerItemCardType");
+var ViewerItemCardType_1 = require("../ViewerItem/ViewerItemCardType");
 var Viewer = (function (_super) {
     __extends(Viewer, _super);
     function Viewer() {
@@ -34,11 +33,11 @@ var Viewer = (function (_super) {
         var _a = this.props, id = _a.id, article = _a.article;
         return (React.createElement("section", { id: id, className: styles.container },
             React.createElement("div", { className: styles.big },
-                React.createElement(ViewerItem_1.default, __assign({}, article, { typeSingleton: cardType.ViewerItemCardType.Big }))),
+                React.createElement(ViewerItem_1.default, __assign({}, article, { typeSingleton: ViewerItemCardType_1.ViewerItemCardType.Big }))),
             React.createElement("div", { className: styles.medium },
-                React.createElement(ViewerItem_1.default, __assign({}, article, { typeSingleton: cardType.ViewerItemCardType.Medium }))),
+                React.createElement(ViewerItem_1.default, __assign({}, article, { typeSingleton: ViewerItemCardType_1.ViewerItemCardType.Medium }))),
             React.createElement("div", { className: styles.small },
-                React.createElement(ViewerItem_1.default, __assign({}, article, { typeSingleton: cardType.ViewerItemCardType.Small })))));
+                React.createElement(ViewerItem_1.default, __assign({}, article, { typeSingleton: ViewerItemCardType_1.ViewerItemCardType.Small })))));
     };
     return Viewer;
 }(React.Component));
