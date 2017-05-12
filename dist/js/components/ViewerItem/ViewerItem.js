@@ -26,16 +26,17 @@ var ViewerItem = (function (_super) {
         // Get JS Styles
         var InlineStyles = ViewerItem_inlined_css_1.ViewerItemCardTypeStyles(typeSingleton);
         return (React.createElement("table", { role: "presentation", "aria-hidden": "true", cellSpacing: 0, cellPadding: 0, width: "100%", style: InlineStyles.table },
-            React.createElement("tr", null,
-                React.createElement("td", null,
-                    React.createElement("img", { src: imageSrc, "aria-hidden": "true", width: InlineStyles.img.maxWidth, height: InlineStyles.img.height, alt: "alt_text", className: "center-on-narrow", style: InlineStyles.img }))),
-            React.createElement("tr", null,
-                React.createElement("td", { style: InlineStyles.title.td },
-                    React.createElement("a", { target: "_blank", style: InlineStyles.title.a, href: linkUrl }, finalTitle))),
-            React.createElement("tr", null,
-                React.createElement("td", { style: InlineStyles.date }, date)),
-            React.createElement("tr", null,
-                React.createElement("td", { style: InlineStyles.summary }, finalSummary))));
+            React.createElement("tbody", null,
+                React.createElement("tr", null,
+                    React.createElement("td", null,
+                        React.createElement("img", { src: imageSrc, "aria-hidden": "true", width: InlineStyles.img.maxWidth, height: InlineStyles.img.height, alt: "alt_text", className: "center-on-narrow", style: InlineStyles.img }))),
+                React.createElement("tr", null,
+                    React.createElement("td", { style: InlineStyles.title.td },
+                        React.createElement("a", { target: "_blank", style: InlineStyles.title.a, href: linkUrl }, finalTitle))),
+                React.createElement("tr", null,
+                    React.createElement("td", { style: InlineStyles.date }, date)),
+                React.createElement("tr", null,
+                    React.createElement("td", { style: InlineStyles.summary }, finalSummary)))));
     };
     return ViewerItem;
 }(React.Component));

@@ -24,40 +24,42 @@ class ViewerItem extends React.Component<IViewerItemProps, {}> {
                 width="100%"
                 style={InlineStyles.table}
             >
-                <tr>
-                    <td>
-                        <img
-                            src={imageSrc}
-                            aria-hidden="true"
-                            width={InlineStyles.img.maxWidth}
-                            height={InlineStyles.img.height}
-                            alt="alt_text"
-                            className="center-on-narrow"
-                            style={InlineStyles.img}
-                        />
-                    </td>
-                </tr>
-                <tr>
-                    <td style={InlineStyles.title.td} >
-                        <a
-                            target="_blank"
-                            style={InlineStyles.title.a}
-                            href={linkUrl}
-                        >
-                            {finalTitle}
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={InlineStyles.date} >
-                        {date}
-                    </td>
-                </tr>
-                <tr>
-                    <td style={InlineStyles.summary} >
-                        {finalSummary}
-                    </td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img
+                                src={imageSrc}
+                                aria-hidden="true"
+                                width={InlineStyles.img.maxWidth}
+                                height={InlineStyles.img.height}
+                                alt="alt_text"
+                                className="center-on-narrow"
+                                style={InlineStyles.img}
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style={InlineStyles.title.td} >
+                            <a
+                                target="_blank"
+                                style={InlineStyles.title.a}
+                                href={linkUrl}
+                            >
+                                {finalTitle}
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style={InlineStyles.date} >
+                            {date}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style={InlineStyles.summary} >
+                            {finalSummary}
+                        </td>
+                    </tr>
+                </tbody>
             </table>
 
         );
