@@ -1,11 +1,12 @@
 import * as React from "react";
 import ViewerItem from "../ViewerItem/ViewerItem";
 
-/* tslint:disable:no-var-requires */
+/* tslint:disable-next-line:no-var-requires */
 const styles: any = require("./Viewer.module.css");
 
 // Since TypeScript 2.3 it doesn´t import ViewerItemCardType on this way we need to use require
 // import {ViewerItemCardType} from "../ViewerItem/ViewerItemCardType";
+/* tslint:disable-next-line:no-var-requires */
 const cardType = require("../ViewerItem/ViewerItemCardType");
 /* tslint:enable:no-var-requires */
 
