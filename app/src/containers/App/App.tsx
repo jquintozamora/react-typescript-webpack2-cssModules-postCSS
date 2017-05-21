@@ -7,6 +7,20 @@ const styles: any = require("./App.module.css");
 
 import { IAppProps } from "./IAppProps";
 
+
+
+/* tslint:disable */
+// Source: https://gist.github.com/Kovensky/e2ceb3b9715c4e2ddba3ae36e9abfb05
+interface System {
+    // Lazy Loading
+    import<T>(module: string): Promise<T>
+}
+declare var System: System;
+/* tslint:enable */
+// the 'moment' static import is only used for its types so typescript deletes it
+import * as moment from "moment";
+
+
 export default class App extends React.Component<IAppProps, {}> {
     public static defaultProps: IAppProps = {
         name: "TypeScript Card Types demo"
@@ -23,10 +37,30 @@ export default class App extends React.Component<IAppProps, {}> {
         return (
             <div>
                 <h1 className={styles.title} >Hello, {this.props.name}</h1>
+                <button onClick={this.lazyLoadingMomentJs}>Lazy Load momentjs</button>
                 <Viewer id={"1"} article={article} />
             </div>
-
-
         );
     }
+
+    private loadingMomentJs() {
+        // note, if we have at least one reference to moment in our code without lazyLoading
+        // involved, then the module will be included in the bundle by webpack
+        // moment().format();
+    }
+
+    private lazyLoadingMomentJs() {
+        // if we use moment inside System.import then we will use lazy loading
+        System.import<typeof moment>(/* webpackChunkName: "momentjs" */ "moment")
+            .then((moment) => {
+                // lazyModule has all of the proper types, autocomplete works,
+                // type checking works, code references work \o/
+                console.log(moment().format());
+            })
+            .catch((err) => {
+                console.log("Failed to load moment", err);
+            });
+    }
+
+
 }

@@ -14,6 +14,8 @@ var React = require("react");
 var Viewer_1 = require("../../components/Viewer/Viewer");
 /* tslint:disable:no-var-requires */
 var styles = require("./App.module.css");
+var moment = require("moment");
+/* tslint:enable */
 var App = (function (_super) {
     __extends(App, _super);
     function App() {
@@ -31,7 +33,20 @@ var App = (function (_super) {
             React.createElement("h1", { className: styles.title },
                 "Hello, ",
                 this.props.name),
-            React.createElement(Viewer_1.default, { id: "1", article: article })));
+            React.createElement(Viewer_1.default, { id: "1", article: article }),
+            React.createElement("button", { onClick: this.lazyLoadingMomentJs }, "Lazy Load momentjs")));
+    };
+    App.prototype.loadingMomentJs = function () {
+        moment().format();
+    };
+    App.prototype.lazyLoadingMomentJs = function () {
+        System.import(/* webpackChunkName: "momentjs" */ "moment")
+            .then(function (moment) {
+            console.log(moment().format());
+        })
+            .catch(function (err) {
+            console.log("Failed to load moment", err);
+        });
     };
     return App;
 }(React.Component));
