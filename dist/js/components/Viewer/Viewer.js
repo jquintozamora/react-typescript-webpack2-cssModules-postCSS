@@ -20,10 +20,11 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var ViewerItem_1 = require("../ViewerItem/ViewerItem");
-/* tslint:disable:no-var-requires */
+/* tslint:disable-next-line:no-var-requires */
 var styles = require("./Viewer.module.css");
 // Since TypeScript 2.3 it doesn´t import ViewerItemCardType on this way we need to use require
 // import {ViewerItemCardType} from "../ViewerItem/ViewerItemCardType";
+/* tslint:disable-next-line:no-var-requires */
 var cardType = require("../ViewerItem/ViewerItemCardType");
 var Viewer = (function (_super) {
     __extends(Viewer, _super);
