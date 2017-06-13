@@ -36,7 +36,7 @@
     "react-dom": "15.5.4"
   },
   "devDependencies": {
-    "@types/node": "7.0.29",
+    "@types/node": "7.0.31",
     "autoprefixer": "7.1.1",
     "css-loader": "0.28.4",
     "extract-text-webpack-plugin": "2.1.2",

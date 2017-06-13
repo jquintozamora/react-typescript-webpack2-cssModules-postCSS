@@ -7,8 +7,6 @@ const styles: any = require("./App.module.css");
 
 import { IAppProps } from "./IAppProps";
 
-
-
 /* tslint:disable */
 // Source: https://gist.github.com/Kovensky/e2ceb3b9715c4e2ddba3ae36e9abfb05
 interface System {
@@ -19,7 +17,6 @@ declare var System: System;
 /* tslint:enable */
 // the 'moment' static import is only used for its types so typescript deletes it
 import * as moment from "moment";
-
 
 export default class App extends React.Component<IAppProps, {}> {
     public static defaultProps: IAppProps = {
