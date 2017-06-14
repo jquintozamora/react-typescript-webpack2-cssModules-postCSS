@@ -29,11 +29,11 @@
     "stats": "set NODE_ENV=production && webpack --progress --config ./webpack/webpack.config.stats.js --profile --json > ./webpack/stats/stats.json"
   },
   "dependencies": {
-    "@types/react": "15.0.27",
+    "@types/react": "15.0.28",
     "@types/react-dom": "15.5.0",
     "moment": "2.18.1",
-    "react": "15.5.4",
-    "react-dom": "15.5.4"
+    "react": "15.6.0",
+    "react-dom": "15.6.0"
   },
   "devDependencies": {
     "@types/node": "7.0.31",
