@@ -29,11 +29,11 @@
     "stats": "set NODE_ENV=production && webpack --progress --config ./webpack/webpack.config.stats.js --profile --json > ./webpack/stats/stats.json"
   },
   "dependencies": {
-    "@types/react": "15.0.28",
+    "@types/react": "15.0.29",
     "@types/react-dom": "15.5.0",
     "moment": "2.18.1",
-    "react": "15.6.0",
-    "react-dom": "15.6.0"
+    "react": "15.6.1",
+    "react-dom": "15.6.1"
   },
   "devDependencies": {
     "@types/node": "7.0.31",
@@ -43,7 +43,7 @@
     "path": "0.12.7",
     "postcss-custom-properties": "6.0.1",
     "postcss-import": "10.0.0",
-    "postcss-loader": "2.0.5",
+    "postcss-loader": "2.0.6",
     "postcss-nesting": "4.0.1",
     "react-hot-loader": "^3.0.0-beta.7",
     "source-map-loader": "0.2.1",
