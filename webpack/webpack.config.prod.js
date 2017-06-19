@@ -43,31 +43,38 @@ module.exports = {
         // Here you have all the available by now:
         //    Webpack 1. https://github.com/webpack/webpack/blob/v1.13.3/lib/optimize
         //    Webpack 2. https://github.com/webpack/webpack/tree/master/lib/optimize
+        //    Webpack 3. uglify-js is not external (peer) dependency.
+        //              We should install version <= 2.8 by now (19/06/2017) because version 3 is not supported by plugin
         new webpack.optimize.UglifyJsPlugin({
+            // more info: http://lisperator.net/uglifyjs/compress
             compress: {
-                warnings: false,
-                screw_ie8: true,
-                conditionals: true,
-                unused: true,
-                comparisons: true,
-                sequences: true,
-                dead_code: true,
-                evaluate: true,
-                if_return: true,
-                join_vars: true,
-                drop_console: true,
-                drop_debugger: true,
+                sequences     : true,  // join consecutive statemets with the “comma operator”
+                properties    : true,  // optimize property access: a["foo"] → a.foo
+                dead_code     : true,  // discard unreachable code
+                drop_debugger : true,  // discard “debugger” statements
+                unsafe        : false, // some unsafe optimizations (see below)
+                conditionals  : true,  // optimize if-s and conditional expressions
+                comparisons   : true,  // optimize comparisons
+                evaluate      : true,  // evaluate constant expressions
+                booleans      : true,  // optimize boolean expressions
+                loops         : true,  // optimize loops
+                unused        : true,  // drop unused variables/functions
+                hoist_funs    : true,  // hoist function declarations
+                hoist_vars    : false, // hoist variable declarations
+                if_return     : true,  // optimize if-s followed by return/continue
+                join_vars     : true,  // join var declarations
+                cascade       : true,  // try to cascade `right` into `left` in sequences
+                side_effects  : true,  // drop side-effect-free statements
+                warnings      : true,  // warn about potentially dangerous optimizations/code
                 global_defs: {
                     __REACT_HOT_LOADER__: undefined // eslint-disable-line no-undefined
                 }
             },
-            minimize: true,
-            debug: false,
             sourceMap: true,
             output: {
                 comments: false
-            },
-
+            }
+            // more options: https://github.com/webpack-contrib/uglifyjs-webpack-plugin
         }),
         // Included by default in webpack 2
         // new webpack.optimize.OccurrenceOrderPlugin(),
