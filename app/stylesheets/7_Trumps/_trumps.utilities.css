@@ -6,3 +6,11 @@
   clear: both;
   font-size: 0;
 }
+
+#reactContainer {
+  background-color: peachpuff;
+}
+
+#reactContainer h1 {
+  color: brown;
+}
