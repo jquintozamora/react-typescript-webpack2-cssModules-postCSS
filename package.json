@@ -55,7 +55,7 @@
     "typescript": "^2.3.4",
     "uglify-js": "^2.8.29",
     "webpack": "3.0.0",
-    "webpack-dev-server": "2.4.5",
+    "webpack-dev-server": "2.5.0",
     "webpack-visualizer-plugin": "0.1.11"
   }
 }
