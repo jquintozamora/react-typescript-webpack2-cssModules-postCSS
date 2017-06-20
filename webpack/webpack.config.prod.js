@@ -65,7 +65,7 @@ module.exports = {
                 join_vars     : true,  // join var declarations
                 cascade       : true,  // try to cascade `right` into `left` in sequences
                 side_effects  : true,  // drop side-effect-free statements
-                warnings      : true,  // warn about potentially dangerous optimizations/code
+                warnings      : false,  // warn about potentially dangerous optimizations/code
                 global_defs: {
                     __REACT_HOT_LOADER__: undefined // eslint-disable-line no-undefined
                 }
