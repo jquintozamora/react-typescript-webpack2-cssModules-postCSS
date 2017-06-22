@@ -8,4 +8,3 @@ export interface IViewerItemProps {
     title: string;
     typeSingleton: ViewerItemCardType;
 }
-

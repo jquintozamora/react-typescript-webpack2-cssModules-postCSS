@@ -15,6 +15,7 @@ class ViewerItem extends React.Component<IViewerItemProps, {}> {
 
         // Get JS Styles
         const InlineStyles = ViewerItemCardTypeStyles(typeSingleton);
+
         return (
             <table
                 role="presentation"

@@ -29,14 +29,14 @@
     "stats": "set NODE_ENV=production && webpack --progress --config ./webpack/webpack.config.stats.js --profile --json > ./webpack/stats/stats.json"
   },
   "dependencies": {
-    "@types/react": "15.0.29",
+    "@types/react": "15.0.30",
     "@types/react-dom": "15.5.0",
     "moment": "2.18.1",
     "react": "15.6.1",
     "react-dom": "15.6.1"
   },
   "devDependencies": {
-    "@types/node": "8.0.0",
+    "@types/node": "8.0.1",
     "autoprefixer": "7.1.1",
     "css-loader": "0.28.4",
     "extract-text-webpack-plugin": "2.1.2",
@@ -49,10 +49,10 @@
     "source-map-loader": "0.2.1",
     "style-loader": "0.18.2",
     "stylelint": "7.11.1",
-    "ts-loader": "2.1.0",
+    "ts-loader": "2.2.0",
     "tslint": "5.4.3",
     "tslint-react": "3.0.0",
-    "typescript": "^2.3.4",
+    "typescript": "2.3.4",
     "uglify-js": "2.8.29",
     "webpack": "3.0.0",
     "webpack-dev-server": "2.5.0",
