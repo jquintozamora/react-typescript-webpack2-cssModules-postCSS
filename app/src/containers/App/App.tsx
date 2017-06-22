@@ -55,7 +55,7 @@ export default class App extends React.Component<IAppProps, {}> {
                 console.log(moment().format());
             })
             .catch((err) => {
-                console.warn("Failed to load moment", err);
+                console.log("Failed to load moment", err);
             });
     }
 
