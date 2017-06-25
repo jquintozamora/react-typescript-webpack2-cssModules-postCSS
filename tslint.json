@@ -6,7 +6,7 @@
       ["describe", "only"],
       ["it", "only"]
     ],
-    "linebreak-style": [true, "LF"],
+    "linebreak-style": [true, "CRLF"],
     "no-invalid-this": [true, "check-function-in-method"],
     "variable-name": [
         "ban-keywords",
