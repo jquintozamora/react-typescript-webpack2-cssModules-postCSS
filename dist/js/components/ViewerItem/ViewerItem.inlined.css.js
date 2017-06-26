@@ -15,7 +15,6 @@ exports.ViewerItemCardTypeStyles = function (props) {
             maxWidth: props.imageWidth,
             height: props.imageHeight,
             backgroundColor: "#dddddd",
-            fontFamily: "sans-serif",
             fontSize: 15,
             color: "#555555"
         },
@@ -23,7 +22,6 @@ exports.ViewerItemCardTypeStyles = function (props) {
             td: {
                 verticalAlign: "top",
                 padding: 10,
-                fontFamily: "sans-serif",
                 fontSize: props.titleFontSize,
                 height: props.titleMinHeight
             },
@@ -35,7 +33,6 @@ exports.ViewerItemCardTypeStyles = function (props) {
         date: {
             verticalAlign: "top",
             padding: "0px 10px",
-            fontFamily: "sans-serif",
             fontSize: props.summaryFontSize,
             color: "#555555",
             height: props.dateMinHeight
@@ -43,7 +40,6 @@ exports.ViewerItemCardTypeStyles = function (props) {
         summary: {
             verticalAlign: "top",
             padding: 10,
-            fontFamily: "sans-serif",
             fontSize: props.summaryFontSize,
             color: "#555555",
             height: props.summaryMinHeight

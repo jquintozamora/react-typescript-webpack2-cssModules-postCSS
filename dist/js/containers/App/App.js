@@ -29,9 +29,6 @@ var App = (function (_super) {
             title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at purus nibh. Cras metus nulla, vestibulum in auctor ac Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet."
         };
         return (React.createElement("div", null,
-            React.createElement("h1", { className: styles.title },
-                "Hello, ",
-                this.props.name),
             React.createElement(AsyncLoading_1.default, null),
             React.createElement(Viewer_1.default, { id: "1", article: article })));
     };

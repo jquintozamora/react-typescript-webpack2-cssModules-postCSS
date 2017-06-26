@@ -1,4 +1,5 @@
 import * as React from "react";
+import Header from "../../components/Header/Header";
 import Viewer from "../../components/Viewer/Viewer";
 import AsyncLoading from "../../components/AsyncLoading/AsyncLoading";
 
@@ -23,7 +24,7 @@ export default class App extends React.Component<IAppProps, {}> {
 
         return (
             <div>
-                <h1 className={styles.title} >Hello, {this.props.name}</h1>
+                <Header title={this.props.name} />
                 <AsyncLoading />
                 <Viewer id={"1"} article={article} />
             </div>

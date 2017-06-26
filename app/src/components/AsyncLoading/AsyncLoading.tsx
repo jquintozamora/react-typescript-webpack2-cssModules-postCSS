@@ -3,9 +3,7 @@ import * as React from "react";
 /* tslint:disable-next-line:no-var-requires */
 const styles: any = require("./AsyncLoading.module.css");
 
-
 import { IAsyncLoadingState } from "./IAsyncLoadingState";
-
 
 /* tslint:disable */
 // Source: https://gist.github.com/Kovensky/e2ceb3b9715c4e2ddba3ae36e9abfb05
@@ -30,9 +28,9 @@ class AsyncLoading extends React.Component<{}, IAsyncLoadingState> {
 
     public render() {
         return (
-            <div>
-                <button className={styles.button} onClick={this.lazyLoadingMomentJs}>Lazy Load momentjs</button>
-                <div className={styles.time} >{this.state.time}</div>
+            <div className={styles.container}>
+                <button onClick={this.lazyLoadingMomentJs}>Lazy Load momentjs</button>
+                <div>{this.state.time}</div>
             </div>
         );
     }
@@ -51,7 +49,7 @@ class AsyncLoading extends React.Component<{}, IAsyncLoadingState> {
                 // type checking works, code references work \o/
                 const time = moment().format();
                 console.log(time);
-                this.setState({time});
+                this.setState({ time });
             })
             .catch((err) => {
                 console.log("Failed to load moment", err);

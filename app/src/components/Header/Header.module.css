@@ -1,0 +1,18 @@
+@import "../../../stylesheets/1_Settings/_settings.colors.css";
+
+/*
+  Exports the variable to be exposed in CSS Modules (styles object in React)
+*/
+:export {
+  header_bg: var(--headerBackground);
+}
+
+.header {
+  text-align: center;
+  font-size: .8em;
+  padding-bottom: 1px;
+  margin-bottom: 5px;
+  background-color: var(--headerBackground);
+}
+
+
