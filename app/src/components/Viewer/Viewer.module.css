@@ -4,6 +4,12 @@
   margin: 0 auto;
 }
 
+.title {
+  text-decoration: underline;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
 .commom {
   text-align: left;
   float: left;
@@ -21,3 +27,4 @@
 .small {
   composes: commom;
 }
+
