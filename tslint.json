@@ -20,7 +20,10 @@
     "max-line-length": [ 180 ],
     "max-classes-per-file": [true, 5],
     "object-literal-sort-keys": false,
-    "jsx-no-multiline-js": false
+    "jsx-no-multiline-js": false,
+    "ordered-imports": [
+      false
+    ]
   },
   "jsRules": {
     "object-literal-shorthand": true,

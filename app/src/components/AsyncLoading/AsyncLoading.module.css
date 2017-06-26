@@ -1,0 +1,12 @@
+.button {
+  height: 20px;
+  position: relative;
+  margin: -20px -75px;
+  width: 150px;
+  top: 50%;
+  left: 50%;
+}
+
+.time {
+  text-align: center;
+}

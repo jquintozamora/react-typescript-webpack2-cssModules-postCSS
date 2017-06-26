@@ -14,15 +14,19 @@ class Viewer extends React.Component<IViewerProps, {}> {
         const { id, article } = this.props;
         return (
             <section id={id} className={styles.container} >
+
                 <div className={styles.big}>
                     <ViewerItem {...article} typeSingleton={ViewerItemCardType.Big} />
                 </div>
+
                 <div className={styles.medium}>
                     <ViewerItem {...article} typeSingleton={ViewerItemCardType.Medium} />
                 </div>
+
                 <div className={styles.small}>
                     <ViewerItem {...article} typeSingleton={ViewerItemCardType.Small} />
                 </div>
+
             </section>
         );
     }

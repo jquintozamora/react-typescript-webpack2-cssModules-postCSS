@@ -25,6 +25,7 @@ var render = function (Component) {
     // HTML root element for React app
     document.getElementById("reactContainer"));
 };
+// Call render function with App
 render(App_1.default);
 // Hot Module Replacement API
 if (module.hot) {

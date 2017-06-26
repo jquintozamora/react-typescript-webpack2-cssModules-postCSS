@@ -12,6 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var Viewer_1 = require("../../components/Viewer/Viewer");
+var AsyncLoading_1 = require("../../components/AsyncLoading/AsyncLoading");
 /* tslint:disable:no-var-requires */
 var styles = require("./App.module.css");
 var App = (function (_super) {
@@ -31,25 +32,8 @@ var App = (function (_super) {
             React.createElement("h1", { className: styles.title },
                 "Hello, ",
                 this.props.name),
-            React.createElement("button", { onClick: this.lazyLoadingMomentJs }, "Lazy Load momentjs"),
+            React.createElement(AsyncLoading_1.default, null),
             React.createElement(Viewer_1.default, { id: "1", article: article })));
-    };
-    App.prototype.loadingMomentJs = function () {
-        // note, if we have at least one reference to moment in our code without lazyLoading
-        // involved, then the module will be included in the bundle by webpack
-        // moment().format();
-    };
-    App.prototype.lazyLoadingMomentJs = function () {
-        // if we use moment inside System.import then we will use lazy loading
-        System.import(/* webpackChunkName: "momentjs" */ "moment")
-            .then(function (moment) {
-            // lazyModule has all of the proper types, autocomplete works,
-            // type checking works, code references work \o/
-            console.log(moment().format());
-        })
-            .catch(function (err) {
-            console.log("Failed to load moment", err);
-        });
     };
     return App;
 }(React.Component));

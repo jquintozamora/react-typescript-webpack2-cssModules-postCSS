@@ -31,6 +31,7 @@ const render = (Component: any) => {
     );
 };
 
+// Call render function with App
 render(App);
 
 // TypeScript declaration for module.hot
