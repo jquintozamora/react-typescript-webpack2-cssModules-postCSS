@@ -19,10 +19,13 @@ var Header = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Header.prototype.render = function () {
-        return (React.createElement("header", null,
-            React.createElement("h1", { className: styles.title },
-                "Hello, ",
-                this.props.title)));
+        return (React.createElement("header", { className: styles.header },
+            React.createElement("h1", null,
+                "Hello Developers 33, ",
+                this.props.title),
+            React.createElement("h3", null,
+                "Header background Color from PostCSS => var(--headerBackground): ",
+                styles.header_bg)));
     };
     return Header;
 }(React.Component));

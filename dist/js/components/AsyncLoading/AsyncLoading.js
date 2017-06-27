@@ -17,6 +17,13 @@ var AsyncLoading = (function (_super) {
     __extends(AsyncLoading, _super);
     function AsyncLoading(props, context) {
         var _this = _super.call(this, props, context) || this;
+        _this.loadingMomentJs = function () {
+            // note, if we have at least one reference to moment in our code without lazyLoading
+            // involved, then the module will be included in the bundle by webpack
+            //const time = moment().format();
+            //console.log(time);
+            //this.setState({ time });
+        };
         _this.lazyLoadingMomentJs = function () {
             // if we use moment inside System.import then we will use lazy loading
             System.import(/* webpackChunkName: "momentjs" */ "moment")
@@ -38,17 +45,9 @@ var AsyncLoading = (function (_super) {
         return _this;
     }
     AsyncLoading.prototype.render = function () {
-        return (React.createElement("div", null,
-            React.createElement("button", { className: styles.button, onClick: this.lazyLoadingMomentJs }, "Lazy Load momentjs"),
-            React.createElement("div", { className: styles.time }, this.state.time),
-            React.createElement("div", null,
-                "Font-family: ",
-                styles.fontFamily)));
-    };
-    AsyncLoading.prototype.loadingMomentJs = function () {
-        // note, if we have at least one reference to moment in our code without lazyLoading
-        // involved, then the module will be included in the bundle by webpack
-        // moment().format();
+        return (React.createElement("div", { className: styles.container },
+            React.createElement("button", { onClick: this.lazyLoadingMomentJs }, "Lazy Load momentjs"),
+            React.createElement("div", null, this.state.time)));
     };
     return AsyncLoading;
 }(React.Component));

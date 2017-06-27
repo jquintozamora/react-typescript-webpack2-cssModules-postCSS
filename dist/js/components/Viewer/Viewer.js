@@ -31,6 +31,7 @@ var Viewer = (function (_super) {
     Viewer.prototype.render = function () {
         var _a = this.props, id = _a.id, article = _a.article;
         return (React.createElement("section", { id: id, className: styles.container },
+            React.createElement("div", { className: styles.title }, "Card Types sample"),
             React.createElement("div", { className: styles.big },
                 React.createElement(ViewerItem_1.default, __assign({}, article, { typeSingleton: ViewerItemCardType_1.ViewerItemCardType.Big }))),
             React.createElement("div", { className: styles.medium },

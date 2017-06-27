@@ -11,6 +11,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+var Header_1 = require("../../components/Header/Header");
 var Viewer_1 = require("../../components/Viewer/Viewer");
 var AsyncLoading_1 = require("../../components/AsyncLoading/AsyncLoading");
 /* tslint:disable:no-var-requires */
@@ -29,6 +30,7 @@ var App = (function (_super) {
             title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at purus nibh. Cras metus nulla, vestibulum in auctor ac Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet."
         };
         return (React.createElement("div", null,
+            React.createElement(Header_1.default, { title: this.props.name }),
             React.createElement(AsyncLoading_1.default, null),
             React.createElement(Viewer_1.default, { id: "1", article: article })));
     };

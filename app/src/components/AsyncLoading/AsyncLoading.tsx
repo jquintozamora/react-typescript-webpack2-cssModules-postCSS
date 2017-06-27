@@ -35,10 +35,12 @@ class AsyncLoading extends React.Component<{}, IAsyncLoadingState> {
         );
     }
 
-    private loadingMomentJs() {
+    private loadingMomentJs = () => {
         // note, if we have at least one reference to moment in our code without lazyLoading
         // involved, then the module will be included in the bundle by webpack
-        // moment().format();
+        //const time = moment().format();
+        //console.log(time);
+        //this.setState({ time });
     }
 
     private lazyLoadingMomentJs = () => {

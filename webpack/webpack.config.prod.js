@@ -76,9 +76,8 @@ module.exports = {
             }
             // more options: https://github.com/webpack-contrib/uglifyjs-webpack-plugin
         }),
-        // Included by default in webpack 2
-        // new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.optimize.AggressiveMergingPlugin()
+        // You can remove this if you don't use Moment.js:
+        // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
     module: {
         // loaders -> rules in webpack 2
