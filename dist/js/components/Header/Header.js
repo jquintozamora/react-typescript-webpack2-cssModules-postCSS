@@ -21,7 +21,7 @@ var Header = (function (_super) {
     Header.prototype.render = function () {
         return (React.createElement("header", { className: styles.header },
             React.createElement("h1", null,
-                "Hello Developers 33, ",
+                "Hello, ",
                 this.props.title),
             React.createElement("h3", null,
                 "Header background Color from PostCSS => var(--headerBackground): ",
