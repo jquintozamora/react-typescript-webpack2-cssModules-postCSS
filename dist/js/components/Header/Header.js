@@ -9,8 +9,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
+import * as React from "react";
 /* tslint:disable-next-line:no-var-requires */
 var styles = require("./Header.module.css");
 var Header = (function (_super) {
@@ -29,5 +28,5 @@ var Header = (function (_super) {
     };
     return Header;
 }(React.Component));
-exports.default = Header;
+export default Header;
 //# sourceMappingURL=Header.js.map

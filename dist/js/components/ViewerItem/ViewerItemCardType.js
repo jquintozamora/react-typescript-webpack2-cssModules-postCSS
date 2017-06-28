@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * complex enum simple emulation
  *      kind of Factory with static singleton ViewerItemCardType constants
@@ -25,15 +24,15 @@ var ViewerItemCardType = (function () {
         this.dateMinHeight = dateMinHeight;
         this.summaryMinHeight = summaryMinHeight;
     }
+    ViewerItemCardType.Big = new ViewerItemCardType(1, "FeaturedBig", 330, 660, 110, 160, 21, 16, 68, 18, 58);
+    ViewerItemCardType.Medium = new ViewerItemCardType(2, "FeaturedSmall", 155, 310, 50, 125, 20, 14, 66, 16, 68);
+    ViewerItemCardType.Small = new ViewerItemCardType(3, "NormalArticle", 100, 200, 35, 115, 18, 12, 62, 14, 75);
+    ViewerItemCardType.All = [
+        ViewerItemCardType.Big,
+        ViewerItemCardType.Medium,
+        ViewerItemCardType.Small
+    ];
     return ViewerItemCardType;
 }());
-ViewerItemCardType.Big = new ViewerItemCardType(1, "FeaturedBig", 330, 660, 110, 160, 21, 16, 68, 18, 58);
-ViewerItemCardType.Medium = new ViewerItemCardType(2, "FeaturedSmall", 155, 310, 50, 125, 20, 14, 66, 16, 68);
-ViewerItemCardType.Small = new ViewerItemCardType(3, "NormalArticle", 100, 200, 35, 115, 18, 12, 62, 14, 75);
-ViewerItemCardType.All = [
-    ViewerItemCardType.Big,
-    ViewerItemCardType.Medium,
-    ViewerItemCardType.Small
-];
-exports.ViewerItemCardType = ViewerItemCardType;
+export { ViewerItemCardType };
 //# sourceMappingURL=ViewerItemCardType.js.map
