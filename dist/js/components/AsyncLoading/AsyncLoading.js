@@ -47,9 +47,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 import * as React from "react";
 /* tslint:disable-next-line:no-var-requires */
 var styles = require("./AsyncLoading.module.css");
-/* tslint:enable */
-// the 'moment' static import is only used for its types so typescript deletes it
-import * as moment from "moment";
 var AsyncLoading = (function (_super) {
     __extends(AsyncLoading, _super);
     function AsyncLoading(props, context) {
@@ -57,9 +54,9 @@ var AsyncLoading = (function (_super) {
         _this.loadingMomentJs = function () {
             // note, if we have at least one reference to moment in our code without lazyLoading
             // involved, then the module will be included in the bundle by webpack
-            var time = moment().format();
-            console.log(time);
-            _this.setState({ time: time });
+            // const time = moment().format();
+            // console.log(time);
+            // this.setState({ time });
         };
         _this.lazyLoadingMomentJs = function () { return __awaiter(_this, void 0, void 0, function () {
             var _this = this;
