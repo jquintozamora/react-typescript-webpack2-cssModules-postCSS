@@ -9,10 +9,11 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import * as React from "react";
-import Header from "../../components/Header/Header";
-import Viewer from "../../components/Viewer/Viewer";
-import AsyncLoading from "../../components/AsyncLoading/AsyncLoading";
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var Header_1 = require("../../components/Header/Header");
+var Viewer_1 = require("../../components/Viewer/Viewer");
+var AsyncLoading_1 = require("../../components/AsyncLoading/AsyncLoading");
 /* tslint:disable:no-var-requires */
 var styles = require("./App.module.css");
 var App = (function (_super) {
@@ -29,14 +30,14 @@ var App = (function (_super) {
             title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at purus nibh. Cras metus nulla, vestibulum in auctor ac Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet."
         };
         return (React.createElement("div", null,
-            React.createElement(Header, { title: this.props.name }),
-            React.createElement(AsyncLoading, null),
-            React.createElement(Viewer, { id: "1", article: article })));
-    };
-    App.defaultProps = {
-        name: "TypeScript Card Types demo"
+            React.createElement(Header_1.default, { title: this.props.name }),
+            React.createElement(AsyncLoading_1.default, null),
+            React.createElement(Viewer_1.default, { id: "1", article: article })));
     };
     return App;
 }(React.Component));
-export default App;
+App.defaultProps = {
+    name: "TypeScript Card Types demo"
+};
+exports.default = App;
 //# sourceMappingURL=App.js.map

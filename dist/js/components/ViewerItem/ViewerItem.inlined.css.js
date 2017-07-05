@@ -1,5 +1,6 @@
 "use strict";
-export var ViewerItemCardTypeStyles = function (props) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ViewerItemCardTypeStyles = function (props) {
     return {
         table: {
             border: "0",

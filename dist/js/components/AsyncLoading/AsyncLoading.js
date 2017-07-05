@@ -44,7 +44,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import * as React from "react";
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
 /* tslint:disable-next-line:no-var-requires */
 var styles = require("./AsyncLoading.module.css");
 var AsyncLoading = (function (_super) {
@@ -60,45 +61,41 @@ var AsyncLoading = (function (_super) {
         };
         _this.lazyLoadingMomentJs = function () { return __awaiter(_this, void 0, void 0, function () {
             var _this = this;
-            var momentAsync, timeAsync;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, import(/* webpackChunkName: "momentjs" */ "moment")];
-                    case 1:
-                        momentAsync = _a.sent();
-                        timeAsync = momentAsync().format();
-                        console.log("TypeScript >= 2.4.0 with async await:");
-                        console.log(timeAsync);
-                        this.setState({ time: timeAsync });
-                        // TypeScript >= 2.4.0 with then, catch
-                        import(/* webpackChunkName: "momentjs" */ "moment")
-                            .then(function (moment) {
-                            // lazyModule has all of the proper types, autocomplete works,
-                            // type checking works, code references work \o/
-                            var time = moment().format();
-                            console.log("TypeScript >= 2.4.0 with then, catch:");
-                            console.log(time);
-                            _this.setState({ time: time });
-                        })
-                            .catch(function (err) {
-                            console.log("Failed to load moment", err);
-                        });
-                        // TypeScript < 2.4 workaround
-                        // if we use moment inside System.import then we will use lazy loading
-                        System.import(/* webpackChunkName: "momentjs" */ "moment")
-                            .then(function (moment) {
-                            // lazyModule has all of the proper types, autocomplete works,
-                            // type checking works, code references work \o/
-                            var time = moment().format();
-                            console.log("TypeScript < 2.4 workaround:");
-                            console.log(time);
-                            _this.setState({ time: time });
-                        })
-                            .catch(function (err) {
-                            console.log("Failed to load moment", err);
-                        });
-                        return [2 /*return*/];
-                }
+                // TypeScript >= 2.4.0 with async await
+                // const momentAsync = await import(/* webpackChunkName: "momentjs" */ "moment");
+                // const timeAsync = momentAsync().format();
+                // console.log("TypeScript >= 2.4.0 with async await:");
+                // console.log(timeAsync);
+                // this.setState({ time: timeAsync });
+                // TypeScript >= 2.4.0 with then, catch
+                // import(/* webpackChunkName: "momentjs" */ "moment")
+                //     .then((moment) => {
+                //         // lazyModule has all of the proper types, autocomplete works,
+                //         // type checking works, code references work \o/
+                //         const time = moment().format();
+                //         console.log("TypeScript >= 2.4.0 with then, catch:");
+                //         console.log(time);
+                //         this.setState({ time });
+                //     })
+                //     .catch((err) => {
+                //         console.log("Failed to load moment", err);
+                //     });
+                // TypeScript < 2.4 workaround
+                // if we use moment inside System.import then we will use lazy loading
+                System.import(/* webpackChunkName: "momentjs" */ "moment")
+                    .then(function (moment) {
+                    // lazyModule has all of the proper types, autocomplete works,
+                    // type checking works, code references work \o/
+                    var time = moment().format();
+                    console.log("TypeScript < 2.4 workaround:");
+                    console.log(time);
+                    _this.setState({ time: time });
+                })
+                    .catch(function (err) {
+                    console.log("Failed to load moment", err);
+                });
+                return [2 /*return*/];
             });
         }); };
         // Default State values
@@ -114,5 +111,5 @@ var AsyncLoading = (function (_super) {
     };
     return AsyncLoading;
 }(React.Component));
-export default AsyncLoading;
+exports.default = AsyncLoading;
 //# sourceMappingURL=AsyncLoading.js.map

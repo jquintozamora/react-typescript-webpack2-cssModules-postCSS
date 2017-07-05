@@ -9,8 +9,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import * as React from "react";
-import { ViewerItemCardTypeStyles } from "./ViewerItem.inlined.css";
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var ViewerItem_inlined_css_1 = require("./ViewerItem.inlined.css");
 var ViewerItem = (function (_super) {
     __extends(ViewerItem, _super);
     function ViewerItem() {
@@ -23,7 +24,7 @@ var ViewerItem = (function (_super) {
         var titleMaxWords = typeSingleton.titleMaxWords;
         var finalTitle = (title.length > titleMaxWords) ? title.substring(0, titleMaxWords).concat("...") : title;
         // Get JS Styles
-        var InlineStyles = ViewerItemCardTypeStyles(typeSingleton);
+        var InlineStyles = ViewerItem_inlined_css_1.ViewerItemCardTypeStyles(typeSingleton);
         return (React.createElement("table", { role: "presentation", "aria-hidden": "true", cellSpacing: 0, cellPadding: 0, width: "100%", style: InlineStyles.table },
             React.createElement("tbody", null,
                 React.createElement("tr", null,
@@ -39,5 +40,5 @@ var ViewerItem = (function (_super) {
     };
     return ViewerItem;
 }(React.Component));
-export default ViewerItem;
+exports.default = ViewerItem;
 //# sourceMappingURL=ViewerItem.js.map

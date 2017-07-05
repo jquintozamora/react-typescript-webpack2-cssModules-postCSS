@@ -47,25 +47,25 @@ class AsyncLoading extends React.Component<{}, IAsyncLoadingState> {
     private lazyLoadingMomentJs = async () => {
 
         // TypeScript >= 2.4.0 with async await
-        const momentAsync = await import(/* webpackChunkName: "momentjs" */ "moment");
-        const timeAsync = momentAsync().format();
-        console.log("TypeScript >= 2.4.0 with async await:");
-        console.log(timeAsync);
-        this.setState({ time: timeAsync });
+        // const momentAsync = await import(/* webpackChunkName: "momentjs" */ "moment");
+        // const timeAsync = momentAsync().format();
+        // console.log("TypeScript >= 2.4.0 with async await:");
+        // console.log(timeAsync);
+        // this.setState({ time: timeAsync });
 
         // TypeScript >= 2.4.0 with then, catch
-        import(/* webpackChunkName: "momentjs" */ "moment")
-            .then((moment) => {
-                // lazyModule has all of the proper types, autocomplete works,
-                // type checking works, code references work \o/
-                const time = moment().format();
-                console.log("TypeScript >= 2.4.0 with then, catch:");
-                console.log(time);
-                this.setState({ time });
-            })
-            .catch((err) => {
-                console.log("Failed to load moment", err);
-            });
+        // import(/* webpackChunkName: "momentjs" */ "moment")
+        //     .then((moment) => {
+        //         // lazyModule has all of the proper types, autocomplete works,
+        //         // type checking works, code references work \o/
+        //         const time = moment().format();
+        //         console.log("TypeScript >= 2.4.0 with then, catch:");
+        //         console.log(time);
+        //         this.setState({ time });
+        //     })
+        //     .catch((err) => {
+        //         console.log("Failed to load moment", err);
+        //     });
 
         // TypeScript < 2.4 workaround
         // if we use moment inside System.import then we will use lazy loading
