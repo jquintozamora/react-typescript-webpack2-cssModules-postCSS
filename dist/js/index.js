@@ -1,7 +1,6 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
-var ReactDOM = require("react-dom");
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 // AppContainer is a necessary wrapper component for HMR
 // We use require because TypeScript type warning,
 // tslint:disable
@@ -13,11 +12,11 @@ var AppContainer = require("react-hot-loader").AppContainer;
     - In webpack Dev it will be injected as /**
     - In webpack prod it will be extracted as a separate bundled file
  */
-require("./../stylesheets/main.css");
+import "./../stylesheets/main.css";
 /*
   Main App Container
  */
-var App_1 = require("./containers/App/App");
+import App from "./containers/App/App";
 // Render function containing the HMR AppContainer
 var render = function (Component) {
     ReactDOM.render(React.createElement(AppContainer, null,
@@ -26,7 +25,7 @@ var render = function (Component) {
     document.getElementById("reactContainer"));
 };
 // Call render function with App
-render(App_1.default);
+render(App);
 // Hot Module Replacement API
 if (module.hot) {
     module.hot.accept("./containers/App/App", function () {
