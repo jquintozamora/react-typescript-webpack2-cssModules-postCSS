@@ -1,15 +1,18 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-//  WebPack 2 PROD Config
+//  WebPack PROD Config
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-//
 //  author: Jose Quinto - https://blog.josequinto.com
-//
-//  WebPack 2 Migrating guide: https://webpack.js.org/guides/migrating/
-//
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 const resolve = require('path').resolve;
 const webpack = require('webpack');
+const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+// `publicUrl` is just like `publicPath`, but we will provide it to our app
+// The public URL is available as %PUBLIC_URL% in index.html, e.g.:
+// In development, this will be an empty string.
+const publicUrl = '';
 
 module.exports = {
     // To enhance the debugging process. More info: https://webpack.js.org/configuration/devtool/
@@ -30,10 +33,17 @@ module.exports = {
         ]
     },
     output: {
-        path: resolve(__dirname, '../dist'),
-        filename: '[name].js',
-        chunkFilename: '[name].bundle.js',
-        // necessary for HMR to know where to load the hot update chunks
+        // Next line is not used in dev but WebpackDevServer crashes without it
+        path: resolve(__dirname, './../build'),
+        // Add /* filename */ comments to generated require()s in the output.
+        pathinfo: true,
+        // This does not produce a real file. It's just the virtual path that is
+        // served by WebpackDevServer in development. This is the JS bundle
+        // containing code from all our entry points, and the Webpack runtime.
+        filename: 'static/js/[name].js',
+        // There are also additional JS chunk files if you use code splitting.
+        chunkFilename: 'static/js/[name].chunk.js',
+        // This is the URL that app is served from. We use "/" in development.
         publicPath: '/'
     },
 
@@ -43,7 +53,7 @@ module.exports = {
         // enable HMR on the server
         hot: true,
         // match the output path
-        contentBase: resolve(__dirname, '../dist'),
+        contentBase: resolve(__dirname, './../public'),
         // match the output `publicPath`
         publicPath: '/',
 
@@ -66,6 +76,21 @@ module.exports = {
         extensions: [".ts", ".tsx", ".js"]
     },
     plugins: [
+
+        // Makes some environment variables available in index.html.
+        // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
+        // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+        // In development, this will be an empty string.
+        new InterpolateHtmlPlugin({
+            PUBLIC_URL: publicUrl
+        }),
+
+        // Generates an `index.html` file with the <script> injected.
+        new HtmlWebpackPlugin({
+            inject: true,
+            template: 'public/index.html',
+        }),
+
         // enable HMR globally
         new webpack.HotModuleReplacementPlugin(),
 
@@ -75,9 +100,11 @@ module.exports = {
         // do not emit compiled assets that include errors
         new webpack.NoEmitOnErrorsPlugin()
     ],
+
     watchOptions: {
         poll: true
     },
+
     module: {
         // loaders -> rules in webpack 2
         rules: [
