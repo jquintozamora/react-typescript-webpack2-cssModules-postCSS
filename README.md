@@ -4,7 +4,7 @@ If you like to don't forget to ★ on Github.
 
 ## Features
 - [React 15.6.1](https://facebook.github.io/react)
-- [TypeScript 2.3.4](https://www.typescriptlang.org) (compiling directly to ES5)
+- [TypeScript 2.4.1](https://www.typescriptlang.org) (compiling directly to ES5)
   - Using [@types instead of TSD or typings folder](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/tsconfig.json#L43)
 - [Hot Module Replacement](https://medium.com/@dan_abramov/hot-reloading-in-react-1140438583bf#.xh6v0ht7j) ([React Hot Loader 3](https://github.com/gaearon/react-hot-loader/issues/243))
 - [Webpack 2](https://webpack.js.org)
@@ -66,7 +66,7 @@ $ git clone https://github.com/username/react-typescript-webpack2-cssModules-pos
 
 ### Install Project dependencies
 ```
-$ cd react-es6-webpack-minimal-starter-template
+$ cd react-typescript-webpack2-cssModules-postCSS
 $ npm install
 ```
 
