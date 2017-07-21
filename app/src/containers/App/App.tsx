@@ -3,10 +3,6 @@ import Header from "../../components/Header/Header";
 import Viewer from "../../components/Viewer/Viewer";
 import AsyncLoading from "../../components/AsyncLoading/AsyncLoading";
 
-/* tslint:disable:no-var-requires */
-const styles: any = require("./App.module.css");
-/* tslint:enable:no-var-requires */
-
 import { IAppProps } from "./IAppProps";
 
 export default class App extends React.Component<IAppProps, {}> {
@@ -25,7 +21,7 @@ export default class App extends React.Component<IAppProps, {}> {
         return (
             <div>
                 <Header title={this.props.name} />
-                <AsyncLoading />
+                 <AsyncLoading />
                 <Viewer id={"1"} article={article} />
             </div>
         );

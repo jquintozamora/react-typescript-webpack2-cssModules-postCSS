@@ -1,11 +1,8 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { render } from "react-dom";
 
 // AppContainer is a necessary wrapper component for HMR
-// We use require because TypeScript type warning,
-// tslint:disable
-const { AppContainer } = require("react-hot-loader");
-// tslint:enable
+import { AppContainer } from "react-hot-loader";
 
 /*
   Main App CSS
@@ -20,28 +17,25 @@ import "./../stylesheets/main.css";
  */
 import App from "./containers/App/App";
 
-// Render function containing the HMR AppContainer
-const render = (Component: any) => {
-    ReactDOM.render(
-        <AppContainer>
-            <Component />
-        </AppContainer>,
-        // HTML root element for React app
-        document.getElementById("reactContainer")
-    );
-};
+const reactContainer = document.getElementById("reactContainer");
 
-// Call render function with App
-render(App);
+render(
+  <AppContainer>
+    <App />
+  </AppContainer>,
+  reactContainer
+);
 
-// TypeScript declaration for module.hot
-declare var module: { hot: any };
 // Hot Module Replacement API
 if (module.hot) {
-    module.hot.accept("./containers/App/App", () => {
-        // If we receive a HMR request for our App container,
-        // then reload it using require (we can't do this dynamically with import)
-        const NextApp = require("./containers/App/App").default;
-        render(NextApp);
-    });
+  module.hot.accept(() => {
+    const NextApp = require<{default: typeof App}>("./containers/App/App").default;
+    render(
+      <AppContainer>
+        <NextApp />
+      </AppContainer>
+      ,
+      reactContainer
+    );
+  });
 }
