@@ -10,8 +10,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import * as React from "react";
-/* tslint:disable-next-line:no-var-requires */
-var styles = require("./Header.module.css");
+import * as styles from "./Header.module.css";
 var Header = (function (_super) {
     __extends(Header, _super);
     function Header() {

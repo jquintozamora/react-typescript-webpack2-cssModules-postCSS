@@ -1,8 +1,7 @@
 import * as React from "react";
 import ViewerItem from "../ViewerItem/ViewerItem";
 
-/* tslint:disable-next-line:no-var-requires */
-const styles: any = require("./Viewer.module.css");
+import * as styles from "./Viewer.module.css";
 
 import { ViewerItemCardType } from "../ViewerItem/ViewerItemCardType";
 

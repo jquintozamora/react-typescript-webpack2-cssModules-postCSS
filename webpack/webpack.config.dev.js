@@ -170,14 +170,15 @@ module.exports = {
                         loader: 'style-loader'
                     },
                     {
-                        loader: 'css-loader',
+                        loader: 'typings-for-css-modules-loader',
                         options: {
                             sourceMap: true,
                             importLoaders: 1,
                             modules: true,
                             camelCase: true,
                             localIdentName: '[name]_[local]_[hash:base64:5]',
-                            minimize: false
+                            minimize: false,
+                            namedExport: true
                         },
                     },
                     {

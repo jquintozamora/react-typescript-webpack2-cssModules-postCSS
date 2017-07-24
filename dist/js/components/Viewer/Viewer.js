@@ -19,8 +19,7 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 };
 import * as React from "react";
 import ViewerItem from "../ViewerItem/ViewerItem";
-/* tslint:disable-next-line:no-var-requires */
-var styles = require("./Viewer.module.css");
+import * as styles from "./Viewer.module.css";
 import { ViewerItemCardType } from "../ViewerItem/ViewerItemCardType";
 var Viewer = (function (_super) {
     __extends(Viewer, _super);

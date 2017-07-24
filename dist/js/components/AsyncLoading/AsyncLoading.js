@@ -45,8 +45,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 import * as React from "react";
-/* tslint:disable-next-line:no-var-requires */
-var styles = require("./AsyncLoading.module.css");
+import * as styles from "./AsyncLoading.module.css";
 var AsyncLoading = (function (_super) {
     __extends(AsyncLoading, _super);
     function AsyncLoading(props, context) {

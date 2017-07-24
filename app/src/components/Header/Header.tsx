@@ -1,7 +1,6 @@
 import * as React from "react";
 
-/* tslint:disable-next-line:no-var-requires */
-const styles: any = require("./Header.module.css");
+import * as styles from "./Header.module.css";
 
 import { IHeaderProps } from "./IHeaderProps";
 
