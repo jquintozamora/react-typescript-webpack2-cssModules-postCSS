@@ -13,8 +13,6 @@ import * as React from "react";
 import Header from "../../components/Header/Header";
 import Viewer from "../../components/Viewer/Viewer";
 import AsyncLoading from "../../components/AsyncLoading/AsyncLoading";
-/* tslint:disable:no-var-requires */
-var styles = require("./App.module.css");
 var App = (function (_super) {
     __extends(App, _super);
     function App() {

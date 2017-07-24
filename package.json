@@ -63,6 +63,7 @@
     "typescript": "2.4.1",
     "webpack": "3.3.0",
     "webpack-dev-server": "2.5.1",
-    "webpack-visualizer-plugin": "0.1.11"
+    "webpack-visualizer-plugin": "0.1.11",
+    "typings-for-css-modules-loader":"1.5.0"
   }
 }

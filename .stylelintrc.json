@@ -3,7 +3,6 @@
     "max-empty-lines": 4,
     "string-quotes": "single",
     "color-hex-length": "long",
-    "media-feature-no-missing-punctuation": null,
     "declaration-colon-newline-after": null,
     "font-family-name-quotes": null,
     "number-leading-zero": "never",

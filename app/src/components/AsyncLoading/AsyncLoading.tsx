@@ -1,7 +1,6 @@
 import * as React from "react";
 
-/* tslint:disable-next-line:no-var-requires */
-const styles: any = require("./AsyncLoading.module.css");
+import * as styles from "./AsyncLoading.module.css";
 
 import { IAsyncLoadingState } from "./IAsyncLoadingState";
 
