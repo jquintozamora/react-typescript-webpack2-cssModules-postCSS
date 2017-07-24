@@ -1,5 +1,6 @@
 import * as React from "react";
 
+// styles
 import { ViewerItemCardTypeStyles } from "./ViewerItem.inlined.css";
 
 import { IViewerItemProps } from "./IViewerItemProps";
