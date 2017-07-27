@@ -87,6 +87,11 @@ module.exports = {
             template: 'public/index.html',
         }),
 
+        // ignore *.css.d.ts which cause problems integrated with HMR
+        new webpack.WatchIgnorePlugin([
+            /css\.d\.ts$/
+        ]),
+
         // enable HMR globally
         new webpack.HotModuleReplacementPlugin(),
 

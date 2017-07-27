@@ -10,6 +10,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import * as React from "react";
+// styles
 import { ViewerItemCardTypeStyles } from "./ViewerItem.inlined.css";
 var ViewerItem = (function (_super) {
     __extends(ViewerItem, _super);

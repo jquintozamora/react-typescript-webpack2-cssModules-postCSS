@@ -187,14 +187,15 @@ module.exports = {
                     fallback: 'style-loader',
                     use: [
                         {
-                            loader: 'css-loader',
+                            loader: 'typings-for-css-modules-loader',
                             options: {
                                 sourceMap: true,
                                 importLoaders: 1,
                                 modules: true,
                                 camelCase: true,
                                 localIdentName: '[name]_[local]_[hash:base64:5]',
-                                minimize: true
+                                minimize: false,
+                                namedExport: true
                             },
                         },
                         {

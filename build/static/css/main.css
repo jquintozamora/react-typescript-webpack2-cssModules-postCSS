@@ -1,2 +1,64 @@
-body{background-color:#81d0ae;font-family:Segoe UI Light,Arial,Verdana,helvetica,clean,sans-serif}.commonComponentClass{font-size:15px;color:#000}.u_divClear{clear:both;font-size:0}.Header-module_header_1QEsp{text-align:center;font-size:.8em;padding-bottom:1px;background-color:#ffdab9}.Viewer-module_container_oEYgj{max-width:1280px;text-align:center;margin:0 auto}.Viewer-module_title_2XFmB{text-decoration:underline;font-size:30px;margin-top:10px}.Viewer-module_commom_1yRoT{text-align:left;float:left;margin:15px}.AsyncLoading-module_container_ZKVlm{text-align:center;padding:10px;background-color:beige}
+body{background-color:#81d0ae;font-family:Segoe UI Light,Arial,Verdana,helvetica,clean,sans-serif}.commonComponentClass{font-size:15px;color:#000}.u_divClear{clear:both;font-size:0}/*
+ * SETTINGS-COLORS
+ */
+
+/*
+  * Primary colors
+  */
+
+.Header-module_header_1QEsp {
+  text-align: center;
+  font-size: .8em;
+  padding-bottom: 1px;
+  background-color: peachpuff;
+}
+
+/*
+  Exports the variable to be exposed in CSS Modules (styles object in React)
+*/
+
+
+
+
+.Viewer-module_container_oEYgj {
+  max-width: 1280px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.Viewer-module_title_2XFmB {
+  text-decoration: underline;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.Viewer-module_commom_1yRoT {
+  text-align: left;
+  float: left;
+  margin: 15px 15px;
+}
+
+.Viewer-module_big_2aaUg {
+}
+
+.Viewer-module_medium_2wQTe {
+}
+
+.Viewer-module_small_1qqPp {
+}
+
+/*
+ * SETTINGS-COLORS
+ */
+
+/*
+  * Primary colors
+  */
+
+.AsyncLoading-module_container_ZKVlm {
+  text-align: center;
+  padding: 10px;
+  background-color: beige;
+}
+
 /*# sourceMappingURL=main.css.map*/
