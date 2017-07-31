@@ -1,3 +1,5 @@
+import "react-hot-loader/patch";
+
 import * as React from "react";
 import { render } from "react-dom";
 

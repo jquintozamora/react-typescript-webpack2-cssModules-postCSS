@@ -27,10 +27,13 @@
     "url": "git://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS.git"
   },
   "scripts": {
-    "start": "set NODE_ENV=development && tsc && webpack-dev-server --open --config ./webpack/webpack.config.dev.js",
-    "prebuild": "npm install",
-    "build": "set NODE_ENV=production && webpack --progress --config ./webpack/webpack.config.prod.js",
-    "stats": "set NODE_ENV=production && webpack --progress --config ./webpack/webpack.config.stats.js --profile --json > ./webpack/stats/stats.json"
+    "start": "webpack-dev-server --open --config ./webpack/webpack.config.js --env.env=dev",
+    "build:prod:bundleVisualizer": "npm run build:prod -- --progress --profile --env.addons=bundleVisualizer",
+    "build:prod:bundleAnalyzer": "npm run build:prod -- --env.addons=bundleAnalizer",
+    "build:prod:stats": "npm run build:prod -- --progress --profile --json > ./dist/stats/stats.json",
+    "build": "webpack --config ./webpack/webpack.config.js --env.env=prod",
+    "debug:prod": "npm run debug -- --env.env=prod",
+    "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --config ./webpack/webpack.config.js"
   },
   "dependencies": {
     "@types/react": "15.0.35",
@@ -47,7 +50,6 @@
     "css-loader": "0.28.4",
     "extract-text-webpack-plugin": "3.0.0",
     "html-webpack-plugin": "2.29.0",
-    "path": "0.12.7",
     "postcss-custom-properties": "6.1.0",
     "postcss-import": "10.0.0",
     "postcss-loader": "2.0.6",
@@ -63,7 +65,9 @@
     "typescript": "2.4.2",
     "typings-for-css-modules-loader": "1.5.0",
     "webpack": "3.4.1",
+    "webpack-bundle-analyzer": "^2.8.3",
     "webpack-dev-server": "2.6.1",
+    "webpack-merge": "4.1.0",
     "webpack-visualizer-plugin": "0.1.11"
   }
 }

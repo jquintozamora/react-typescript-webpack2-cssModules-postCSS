@@ -1,4 +1,5 @@
 "use strict";
+import "react-hot-loader/patch";
 import * as React from "react";
 import { render } from "react-dom";
 // AppContainer is a necessary wrapper component for HMR
