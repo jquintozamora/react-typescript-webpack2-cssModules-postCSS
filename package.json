@@ -28,9 +28,9 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --config ./webpack/webpack.config.js --env.env=dev",
-    "build:prod:bundleVisualizer": "npm run build:prod -- --progress --profile --env.addons=bundleVisualizer",
-    "build:prod:bundleAnalyzer": "npm run build:prod -- --env.addons=bundleAnalizer",
-    "build:prod:stats": "npm run build:prod -- --progress --profile --json > ./dist/stats/stats.json",
+    "build:prod:bundleVisualizer": "npm run build -- --progress --profile --env.addons=bundleVisualizer",
+    "build:prod:bundleAnalyzer": "npm run build -- --env.addons=bundleAnalizer",
+    "build:prod:stats": "npm run build -- --progress --profile --json > ./dist/stats/stats.json",
     "build": "webpack --config ./webpack/webpack.config.js --env.env=prod",
     "debug:prod": "npm run debug -- --env.env=prod",
     "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --config ./webpack/webpack.config.js"
