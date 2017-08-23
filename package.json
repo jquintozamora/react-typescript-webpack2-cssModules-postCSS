@@ -30,6 +30,7 @@
     "start": "webpack-dev-server --open --config ./webpack/webpack.config.js --env.env=dev",
     "build:prod:bundleVisualizer": "npm run build -- --progress --profile --env.addons=bundleVisualizer",
     "build:prod:bundleAnalyzer": "npm run build -- --env.addons=bundleAnalizer",
+    "stats": "npm run build:prod:bundleAnalyzer",
     "build:prod:stats": "npm run build -- --progress --profile --json > ./dist/stats/stats.json",
     "build": "webpack --config ./webpack/webpack.config.js --env.env=prod",
     "debug:prod": "npm run debug -- --env.env=prod",
