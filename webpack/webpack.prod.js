@@ -7,13 +7,7 @@
 const commonPaths = require("./common-paths");
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-// `publicUrl` is just like `publicPath`, but we will provide it to our app
-// The public URL is available as %PUBLIC_URL% in index.html, e.g.:
-// In development, this will be an empty string.
-const publicUrl = '.';
 
 module.exports = {
     // Don't attempt to continue if there are any errors.
@@ -25,16 +19,10 @@ module.exports = {
     devtool: 'source-map',
 
     plugins: [
-        // Makes some environment variables available in index.html.
-        // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
-        // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-        new InterpolateHtmlPlugin({
-            PUBLIC_URL: publicUrl
-        }),
         // Generates an `index.html` file with the <script> injected.
         new HtmlWebpackPlugin({
             inject: true,
-            template: 'public/index.html',
+            template: commonPaths.contentBasePath + '/index.html',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,

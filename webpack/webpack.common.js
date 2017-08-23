@@ -5,6 +5,7 @@
 //////////////////////////////////////////////////////////
 
 const commonPaths = require("./common-paths");
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 const config = {
     target: 'web',
     entry: {
@@ -22,8 +23,18 @@ const config = {
         chunkFilename: 'static/js/[name].chunk.js',
 
         // This is the URL that app is served from. We use "/" in development.
-        publicPath: '/'
-    }
+        publicPath: './'
+    },
+    plugins: [
+        new CopyWebpackPlugin([
+            { from: 'public' }
+        ], {
+            ignore: [
+                // Doesn't copy any files with a html extension
+                '*.html',
+            ]
+        })
+    ]
 };
 
 module.exports = config;
