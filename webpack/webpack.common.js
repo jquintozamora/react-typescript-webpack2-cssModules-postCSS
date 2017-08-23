@@ -16,7 +16,7 @@ const config = {
         extensions: [".ts", ".tsx", ".js"]
     },
     output: {
-        filename: 'static/js/[name].js',
+        filename: 'static/js/[name].[hash].js',
         path: commonPaths.outputPath,
 
         // There are also additional JS chunk files if you use code splitting.
