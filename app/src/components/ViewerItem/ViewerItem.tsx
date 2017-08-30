@@ -23,7 +23,7 @@ class ViewerItem extends React.Component<IViewerItemProps, {}> {
                 aria-hidden="true"
                 cellSpacing={0}
                 cellPadding={0}
-                width="100%"
+                // width="100%"
                 style={InlineStyles.table}
             >
                 <tbody>
