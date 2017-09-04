@@ -8,7 +8,7 @@ const commonPaths = require("./common-paths");
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const CompressionWebpackPlugin = require("compression-webpack-plugin");
 module.exports = {
     // Don't attempt to continue if there are any errors.
     bail: true,
@@ -84,6 +84,13 @@ module.exports = {
             }
             // more options: https://github.com/webpack-contrib/uglifyjs-webpack-plugin
         }),
+        new CompressionWebpackPlugin({
+			asset: "[path].gz[query]",
+			algorithm: "gzip",
+			test: /\.(js|html|css)$/,
+			threshold: 10240,
+			minRatio: 0.8
+		})
         // You can remove this if you don't use Moment.js:
         // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
