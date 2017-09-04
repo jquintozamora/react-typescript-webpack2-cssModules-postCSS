@@ -1,6 +1,6 @@
 /**
  * complex enum simple emulation
- *      kind of Factory with static singleton ViewerItemCardType constants
+ *      kind of Factory with static singleton ViewerItemCardType constants.
  *
  *  Resources:
  *  - TypeScript enums: https://github.com/Microsoft/TypeScript/issues/1206#issuecomment-296441490
