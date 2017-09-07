@@ -6,6 +6,8 @@
 
 const commonPaths = require("./common-paths");
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
 const config = {
     target: 'web',
     entry: {
@@ -26,6 +28,7 @@ const config = {
         publicPath: './'
     },
     plugins: [
+        new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
         new CopyWebpackPlugin([
             { from: 'public' }
         ], {

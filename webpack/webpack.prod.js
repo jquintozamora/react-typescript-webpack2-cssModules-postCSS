@@ -9,7 +9,6 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
     // Don't attempt to continue if there are any errors.
@@ -21,7 +20,6 @@ module.exports = {
     devtool: 'source-map',
 
     plugins: [
-        new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
         // Generates an `index.html` file with the <script> injected.
         new HtmlWebpackPlugin({
             inject: true,
