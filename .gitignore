@@ -7,3 +7,6 @@ npm-debug.log*
 
 # Build
 build/*
+
+# Cache
+.cache-loader

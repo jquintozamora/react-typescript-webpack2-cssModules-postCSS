@@ -9,6 +9,8 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
 module.exports = {
     // Don't attempt to continue if there are any errors.
     bail: true,
@@ -19,6 +21,7 @@ module.exports = {
     devtool: 'source-map',
 
     plugins: [
+        new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
         // Generates an `index.html` file with the <script> injected.
         new HtmlWebpackPlugin({
             inject: true,
@@ -85,12 +88,12 @@ module.exports = {
             // more options: https://github.com/webpack-contrib/uglifyjs-webpack-plugin
         }),
         new CompressionWebpackPlugin({
-			asset: "[path].gz[query]",
-			algorithm: "gzip",
-			test: /\.(js|html|css)$/,
-			threshold: 10240,
-			minRatio: 0.8
-		})
+            asset: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.(js|html|css)$/,
+            threshold: 10240,
+            minRatio: 0.8
+        })
         // You can remove this if you don't use Moment.js:
         // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
@@ -109,7 +112,22 @@ module.exports = {
             // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
             {
                 test: /\.ts(x?)$/,
-                loader: 'ts-loader',
+                use: [
+                    { loader: 'cache-loader' },
+                    {
+                        loader: 'thread-loader',
+                        options: {
+                            // there should be 1 cpu for the fork-ts-checker-webpack-plugin
+                            workers: require('os').cpus().length - 1,
+                        },
+                    },
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            happyPackMode: true // IMPORTANT! use happyPackMode mode to speed-up compilation and reduce errors reported to webpack
+                        }
+                    }
+                ],
                 include: commonPaths.srcPath,
                 exclude: /node_modules/
             },
