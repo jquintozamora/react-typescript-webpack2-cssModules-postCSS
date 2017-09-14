@@ -6,7 +6,7 @@
       ["describe", "only"],
       ["it", "only"]
     ],
-    "linebreak-style": [true, "CRLF"],
+    "linebreak-style": [true, "LF"],
     "no-invalid-this": [true, "check-function-in-method"],
     "variable-name": [
         "ban-keywords",
@@ -23,7 +23,9 @@
     "jsx-no-multiline-js": false,
     "ordered-imports": [
       false
-    ]
+    ],
+    "semicolon": [true, "never"],
+    "quotemark": [true, "single"]
   },
   "jsRules": {
     "object-literal-shorthand": true,

@@ -1,3 +1,3 @@
 export interface IAppProps {
-    name?: string;
+    name?: string
 }

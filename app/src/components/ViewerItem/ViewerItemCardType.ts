@@ -10,14 +10,14 @@
  *  - Similar sample: https://codepen.io/ImagineProgramming/pen/GZMXWe?editors=0010#0
  */
 export class ViewerItemCardType {
-    public static Big: ViewerItemCardType = new ViewerItemCardType(1, "FeaturedBig", 330, 660, 110, 160, 21, 16, 68, 18, 58);
-    public static Medium: ViewerItemCardType = new ViewerItemCardType(2, "FeaturedSmall", 155, 310, 50, 125, 20, 14, 66, 16, 68);
-    public static Small: ViewerItemCardType = new ViewerItemCardType(3, "NormalArticle", 100, 200, 35, 115, 18, 12, 62, 14, 75);
+    public static Big: ViewerItemCardType = new ViewerItemCardType(1, 'FeaturedBig', 330, 660, 110, 160, 21, 16, 68, 18, 58)
+    public static Medium: ViewerItemCardType = new ViewerItemCardType(2, 'FeaturedSmall', 155, 310, 50, 125, 20, 14, 66, 16, 68)
+    public static Small: ViewerItemCardType = new ViewerItemCardType(3, 'NormalArticle', 100, 200, 35, 115, 18, 12, 62, 14, 75)
     public static All: ViewerItemCardType[] = [
         ViewerItemCardType.Big,
         ViewerItemCardType.Medium,
         ViewerItemCardType.Small
-    ];
+    ]
     private constructor(
         public id: number,
         public name: string,

@@ -1,16 +1,13 @@
-import * as React from "react";
-import ViewerItem from "../ViewerItem/ViewerItem";
-
-import * as styles from "./Viewer.module.css";
-
-import { ViewerItemCardType } from "../ViewerItem/ViewerItemCardType";
-
-import { IViewerProps } from "./IViewerProps";
+import * as React from 'react'
+import ViewerItem from '../ViewerItem/ViewerItem'
+import * as styles from './Viewer.module.css'
+import { ViewerItemCardType } from '../ViewerItem/ViewerItemCardType'
+import { IViewerProps } from './IViewerProps'
 
 class Viewer extends React.Component<IViewerProps, {}> {
 
     public render() {
-        const { id, article } = this.props;
+        const { id, article } = this.props
         return (
             <section id={id} className={styles.container} >
                 <div className={styles.title} >Card Types sample</div>
@@ -28,8 +25,8 @@ class Viewer extends React.Component<IViewerProps, {}> {
                 </div>
 
             </section>
-        );
+        )
     }
 }
 
-export default Viewer;
+export default Viewer

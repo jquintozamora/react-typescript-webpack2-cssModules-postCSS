@@ -1,26 +1,23 @@
-import * as React from "react";
-
-// styles
-import { ViewerItemCardTypeStyles } from "./ViewerItem.inlined.css";
-
-import { IViewerItemProps } from "./IViewerItemProps";
+import * as React from 'react'
+import { ViewerItemCardTypeStyles } from './ViewerItem.inlined.css'
+import { IViewerItemProps } from './IViewerItemProps'
 
 class ViewerItem extends React.Component<IViewerItemProps, {}> {
 
     public render() {
-        const { date, imageSrc, linkUrl, summary, title, typeSingleton } = this.props;
-        const summaryMaxWords: number = typeSingleton.summaryMaxWords;
-        const finalSummary: string = (summary.length > summaryMaxWords) ? summary.substring(0, summaryMaxWords).concat("...") : summary;
-        const titleMaxWords: number = typeSingleton.titleMaxWords;
-        const finalTitle: string = (title.length > titleMaxWords) ? title.substring(0, titleMaxWords).concat("...") : title;
+        const { date, imageSrc, linkUrl, summary, title, typeSingleton } = this.props
+        const summaryMaxWords: number = typeSingleton.summaryMaxWords
+        const finalSummary: string = (summary.length > summaryMaxWords) ? summary.substring(0, summaryMaxWords).concat('...') : summary
+        const titleMaxWords: number = typeSingleton.titleMaxWords
+        const finalTitle: string = (title.length > titleMaxWords) ? title.substring(0, titleMaxWords).concat('...') : title
 
         // Get JS Styles
-        const InlineStyles = ViewerItemCardTypeStyles(typeSingleton);
+        const InlineStyles = ViewerItemCardTypeStyles(typeSingleton)
 
         return (
             <table
-                role="presentation"
-                aria-hidden="true"
+                role='presentation'
+                aria-hidden='true'
                 cellSpacing={0}
                 cellPadding={0}
                 // width="100%"
@@ -31,11 +28,11 @@ class ViewerItem extends React.Component<IViewerItemProps, {}> {
                         <td>
                             <img
                                 src={imageSrc}
-                                aria-hidden="true"
+                                aria-hidden='true'
                                 width={InlineStyles.img.maxWidth}
                                 height={InlineStyles.img.height}
-                                alt="alt_text"
-                                className="center-on-narrow"
+                                alt='alt_text'
+                                className='center-on-narrow'
                                 style={InlineStyles.img}
                             />
                         </td>
@@ -43,7 +40,7 @@ class ViewerItem extends React.Component<IViewerItemProps, {}> {
                     <tr>
                         <td style={InlineStyles.title.td} >
                             <a
-                                target="_blank"
+                                target='_blank'
                                 style={InlineStyles.title.a}
                                 href={linkUrl}
                             >
@@ -64,8 +61,8 @@ class ViewerItem extends React.Component<IViewerItemProps, {}> {
                 </tbody>
             </table>
 
-        );
+        )
     }
 }
 
-export default ViewerItem;
+export default ViewerItem
