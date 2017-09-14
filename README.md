@@ -42,6 +42,13 @@ If you like to don't forget to ★ on Github.
           - Be sure you have these configurations on your .vscode/settings.json:
               - "css.validate": false,
               - "stylelint.enable": true
+- Testing
+  - [Jest 21.1.0](https://facebook.github.io/jest/): testing framework
+  - Enzyme: helper for testing react components
+    - enzime-to-json: display snapshots correctly with jest and enzyme
+  - identity-obj-proxy: mock css files when testing
+  - react-test-renderer: tbc
+  - ts-jest: needed to make work jest with TypeScript
 
 
 
