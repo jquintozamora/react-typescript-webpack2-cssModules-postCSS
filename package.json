@@ -33,6 +33,7 @@
     "stats": "npm run build:prod:bundleAnalyzer",
     "build:prod:stats": "npm run build -- --progress --profile --json > ./dist/stats/stats.json",
     "build": "webpack --config ./webpack/webpack.config.js --env.env=prod",
+    "test": "jest",
     "debug:prod": "npm run debug -- --env.env=prod",
     "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --config ./webpack/webpack.config.js"
   },
@@ -44,6 +45,8 @@
     "react-dom": "15.6.1"
   },
   "devDependencies": {
+    "@types/enzyme": "2.8.7",
+    "@types/jest": "20.0.8",
     "@types/node": "8.0.9",
     "@types/react-hot-loader": "3.0.4",
     "@types/webpack-env": "1.13.0",
@@ -52,18 +55,24 @@
     "compression-webpack-plugin": "1.0.0",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.28.7",
+    "enzyme": "2.9.1",
+    "enzyme-to-json": "1.5.1",
     "extract-text-webpack-plugin": "3.0.0",
     "fork-ts-checker-webpack-plugin": "0.2.8",
     "html-webpack-plugin": "2.30.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "21.1.0",
     "postcss-custom-properties": "6.1.0",
     "postcss-import": "10.0.0",
     "postcss-loader": "2.0.6",
     "postcss-nesting": "4.1.0",
     "react-hot-loader": "3.0.0-beta.7",
+    "react-test-renderer": "15.6.1",
     "source-map-loader": "0.2.1",
     "style-loader": "0.18.2",
     "stylelint": "8.1.1",
     "thread-loader": "1.1.1",
+    "ts-jest": "21.0.1",
     "ts-loader": "2.3.6",
     "tslint": "5.7.0",
     "tslint-react": "3.2.0",
@@ -74,5 +83,25 @@
     "webpack-dev-server": "2.7.1",
     "webpack-merge": "4.1.0",
     "webpack-visualizer-plugin": "0.1.11"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/unit/__mocks__/fileMock.js",
+      "\\.(css)$": "identity-obj-proxy"
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }
