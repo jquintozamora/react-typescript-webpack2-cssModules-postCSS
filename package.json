@@ -27,7 +27,8 @@
     "url": "git://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --config ./webpack/webpack.config.js --env.env=dev",
+    "start": "node --harmony ./scripts/start.js",
+    "dev": "webpack-dev-server --open --config ./webpack/webpack.config.js --env.env=dev",
     "build:prod:bundleVisualizer": "npm run build -- --progress --profile --env.addons=bundleVisualizer",
     "build:prod:bundleAnalyzer": "npm run build -- --env.addons=bundleAnalizer",
     "stats": "npm run build:prod:bundleAnalyzer",
