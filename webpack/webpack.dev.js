@@ -8,6 +8,10 @@ const commonPaths = require("./common-paths");
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
+const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
+const host = process.env.HOST || 'localhost';
+
 module.exports = {
     // To enhance the debugging process. More info: https://webpack.js.org/configuration/devtool/
     devtool: 'inline-source-map',
@@ -21,8 +25,10 @@ module.exports = {
         hot: true, // enable HMR on the server
         contentBase: commonPaths.contentBasePath, // match the output path
         publicPath: '/', // match the output `publicPath`
-        //host:"0.0.0.0", // Enable to integrate with Docker
-        port: 3000,
+        host: host,
+        https: protocol === 'https',
+        port: DEFAULT_PORT,
+        disableHostCheck: true,
         historyApiFallback: true,
         // All the stats options here: https://webpack.js.org/configuration/stats/
         stats: {
