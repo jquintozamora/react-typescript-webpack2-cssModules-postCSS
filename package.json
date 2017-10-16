@@ -42,22 +42,23 @@
   "dependencies": {
     "@types/react": "16.0.10",
     "@types/react-dom": "16.0.1",
-    "moment": "2.18.1",
+    "moment": "2.19.1",
     "react": "16.0.0",
     "react-dom": "16.0.0"
   },
   "devDependencies": {
-    "@types/enzyme": "2.8.11",
+    "@types/enzyme": "3.1.0",
     "@types/jest": "21.1.2",
-    "@types/node": "8.0.33",
+    "@types/node": "8.0.34",
     "@types/react-hot-loader": "3.0.4",
-    "@types/webpack-env": "1.13.1",
+    "@types/webpack-env": "1.13.2",
     "autoprefixer": "7.1.5",
-    "cache-loader": "1.0.3",
+    "cache-loader": "1.1.0",
     "compression-webpack-plugin": "1.0.1",
     "copy-webpack-plugin": "4.1.1",
     "css-loader": "0.28.7",
     "enzyme": "3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
     "enzyme-to-json": "3.1.2",
     "extract-text-webpack-plugin": "3.0.1",
     "fork-ts-checker-webpack-plugin": "0.2.8",
@@ -66,23 +67,23 @@
     "jest": "21.2.1",
     "postcss-custom-properties": "6.2.0",
     "postcss-import": "11.0.0",
-    "postcss-loader": "2.0.6",
+    "postcss-loader": "2.0.8",
     "postcss-nesting": "4.2.1",
-    "react-hot-loader": "3.0.0-beta.7",
+    "react-hot-loader": "3.1.1",
     "react-test-renderer": "16.0.0",
     "source-map-loader": "0.2.2",
     "style-loader": "0.19.0",
     "stylelint": "8.2.0",
-    "thread-loader": "1.1.1",
-    "ts-jest": "21.1.0",
+    "thread-loader": "1.1.2",
+    "ts-jest": "21.1.2",
     "ts-loader": "2.3.7",
     "tslint": "5.7.0",
     "tslint-react": "3.2.0",
     "typescript": "2.5.3",
     "typings-for-css-modules-loader": "1.7.0",
-    "webpack": "3.6.0",
+    "webpack": "3.7.1",
     "webpack-bundle-analyzer": "2.9.0",
-    "webpack-dev-server": "2.9.1",
+    "webpack-dev-server": "2.9.2",
     "webpack-merge": "4.1.0",
     "webpack-visualizer-plugin": "0.1.11"
   },
@@ -104,6 +105,9 @@
     },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "<rootDir>/test/setup/setupTests.ts"
     ]
   }
 }
