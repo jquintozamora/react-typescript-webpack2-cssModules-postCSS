@@ -12,8 +12,3 @@ global.shallow = Enzyme.shallow
 global.render = Enzyme.render
 global.mount = Enzyme.mount
 global.toJson = toJson
-
-// Fail tests on any warning
-console.error = (message: string) => {
-    throw new Error(message)
-}
