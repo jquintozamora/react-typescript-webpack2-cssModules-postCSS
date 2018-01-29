@@ -1,12 +1,11 @@
 import testComponentHelper from '../../../../../test/unit/helpers/ComponentHelper'
-import Header from './../Header'
+import Viewer from '../Viewer'
 
-describe('<Header />', () => {
+describe('<Viewer />', () => {
     const initialProps = {
         className: ''
     }
-    const renderComponent = testComponentHelper(Header)
-
+    const renderComponent = testComponentHelper(Viewer)
     describe('@renders', () => {
         it('in default state', () => {
             expect(renderComponent().getHtml())

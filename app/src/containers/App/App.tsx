@@ -17,12 +17,11 @@ export default class App extends React.Component<IAppProps, {}> {
             title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at purus nibh. Cras metus nulla, vestibulum in auctor ac Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.'
         }
 
-        return (
-            <div>
-                <Header title={this.props.name} />
-                 <AsyncLoading />
-                <Viewer id={'1'} article={article} />
-            </div>
-        )
+        return <div>
+            <Header title={this.props.name} />
+            <AsyncLoading />
+            <Viewer id={'1'} article={article} />
+        </div>
+
     }
 }

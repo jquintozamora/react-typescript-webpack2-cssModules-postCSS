@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Viewer /> @renders in default state 1`] = `
+<section
+  className="container"
+>
+  <div
+    className="title"
+  >
+    Card Types sample
+  </div>
+  <div
+    className="big"
+  >
+    <ViewerItem
+      typeSingleton={
+        ViewerItemCardType {
+          "dateMinHeight": 18,
+          "id": 1,
+          "imageHeight": 330,
+          "imageWidth": 660,
+          "name": "FeaturedBig",
+          "summaryFontSize": 16,
+          "summaryMaxWords": 160,
+          "summaryMinHeight": 58,
+          "titleFontSize": 21,
+          "titleMaxWords": 110,
+          "titleMinHeight": 68,
+        }
+      }
+    />
+  </div>
+  <div
+    className="medium"
+  >
+    <ViewerItem
+      typeSingleton={
+        ViewerItemCardType {
+          "dateMinHeight": 16,
+          "id": 2,
+          "imageHeight": 155,
+          "imageWidth": 310,
+          "name": "FeaturedSmall",
+          "summaryFontSize": 14,
+          "summaryMaxWords": 125,
+          "summaryMinHeight": 68,
+          "titleFontSize": 20,
+          "titleMaxWords": 50,
+          "titleMinHeight": 66,
+        }
+      }
+    />
+  </div>
+  <div
+    className="small"
+  >
+    <ViewerItem
+      typeSingleton={
+        ViewerItemCardType {
+          "dateMinHeight": 14,
+          "id": 3,
+          "imageHeight": 100,
+          "imageWidth": 200,
+          "name": "NormalArticle",
+          "summaryFontSize": 12,
+          "summaryMaxWords": 115,
+          "summaryMinHeight": 75,
+          "titleFontSize": 18,
+          "titleMaxWords": 35,
+          "titleMinHeight": 62,
+        }
+      }
+    />
+  </div>
+</section>
+`;
