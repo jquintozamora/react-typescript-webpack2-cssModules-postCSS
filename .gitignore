@@ -10,3 +10,6 @@ build/*
 
 # Cache
 .cache-loader
+
+# Stats
+dist/stats/*
