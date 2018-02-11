@@ -29,14 +29,17 @@ const config = {
     },
     plugins: [
         new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
-        new CopyWebpackPlugin([
-            { from: 'public' }
-        ], {
-            ignore: [
-                // Doesn't copy any files with a html extension
-                '*.html',
-            ]
-        })
+        new CopyWebpackPlugin(
+            [
+                { from: 'public' }
+            ],
+            {
+                ignore: [
+                    // Doesn't copy any files with a html extension
+                    '*.html',
+                ]
+            }
+        )
     ]
 };
 

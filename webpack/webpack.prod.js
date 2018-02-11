@@ -111,14 +111,6 @@ module.exports = {
             {
                 test: /\.ts(x?)$/,
                 use: [
-                    { loader: 'cache-loader' },
-                    {
-                        loader: 'thread-loader',
-                        options: {
-                            // there should be 1 cpu for the fork-ts-checker-webpack-plugin
-                            workers: require('os').cpus().length - 1,
-                        },
-                    },
                     {
                         loader: 'ts-loader',
                         options: {
