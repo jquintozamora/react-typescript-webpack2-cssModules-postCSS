@@ -4,7 +4,9 @@ import Viewer from '../../components/Viewer/Viewer'
 import AsyncLoading from '../../components/AsyncLoading/AsyncLoading'
 import { IAppProps } from './IAppProps'
 
-export default class App extends React.Component<IAppProps, {}> {
+import { hot } from 'react-hot-loader'
+
+class App extends React.Component<IAppProps, {}> {
     public static defaultProps: IAppProps = {
         name: 'TypeScript Card Types demo'
     }
@@ -25,3 +27,5 @@ export default class App extends React.Component<IAppProps, {}> {
 
     }
 }
+
+export default hot(module)(App)

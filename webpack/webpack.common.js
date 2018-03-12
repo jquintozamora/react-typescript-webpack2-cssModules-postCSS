@@ -27,6 +27,11 @@ const config = {
         // This is the URL that app is served from. We use "/" in development.
         publicPath: './'
     },
+    optimization: {
+        splitChunks: {
+            chunks: "all"
+        }
+    },
     plugins: [
         new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
         new CopyWebpackPlugin(

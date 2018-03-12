@@ -80,7 +80,6 @@ module.exports = {
             {
                 test: /\.ts(x?)$/,
                 use: [
-                    { loader: 'react-hot-loader/webpack' },
                     {
                         loader: 'ts-loader',
                         options: {

@@ -45,7 +45,7 @@ class AsyncLoading extends React.Component<{}, IAsyncLoadingState> {
 
         // TypeScript >= 2.4.0 with async await
         const momentAsync = await import(/* webpackChunkName: "momentjs" */ 'moment')
-        const timeAsync = momentAsync().format()
+        const timeAsync = (momentAsync as any).default().format()
         console.log('TypeScript >= 2.4.0 with async await:')
         console.log(timeAsync)
         this.setState({ time: timeAsync })
@@ -55,7 +55,7 @@ class AsyncLoading extends React.Component<{}, IAsyncLoadingState> {
             .then((moment) => {
                 // lazyModule has all of the proper types, autocomplete works,
                 // type checking works, code references work \o/
-                const time = moment().format()
+                const time = (moment as any).default().format()
                 console.log('TypeScript >= 2.4.0 with then, catch:')
                 console.log(time)
                 this.setState({ time })
@@ -66,18 +66,18 @@ class AsyncLoading extends React.Component<{}, IAsyncLoadingState> {
 
         // TypeScript < 2.4 workaround
         // if we use moment inside System.import then we will use lazy loading
-        System.import<typeof moment>(/* webpackChunkName: "momentjs" */ 'moment')
-            .then((moment) => {
-                // lazyModule has all of the proper types, autocomplete works,
-                // type checking works, code references work \o/
-                const time = moment().format()
-                console.log('TypeScript < 2.4 workaround:')
-                console.log(time)
-                this.setState({ time })
-            })
-            .catch((err) => {
-                console.log('Failed to load moment', err)
-            })
+        // System.import<typeof moment>(/* webpackChunkName: "momentjs" */ 'moment')
+        //     .then((moment) => {
+        //         // lazyModule has all of the proper types, autocomplete works,
+        //         // type checking works, code references work \o/
+        //         const time = (moment as any).default().format()
+        //         console.log('TypeScript < 2.4 workaround:')
+        //         console.log(time)
+        //         this.setState({ time })
+        //     })
+        //     .catch((err) => {
+        //         console.log('Failed to load moment', err)
+        //     })
     }
 }
 

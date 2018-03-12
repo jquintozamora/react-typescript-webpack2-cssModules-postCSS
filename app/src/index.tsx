@@ -1,10 +1,9 @@
-import 'react-hot-loader/patch'
-
 import * as React from 'react'
 import { render } from 'react-dom'
 
 // AppContainer is a necessary wrapper component for HMR
-import { AppContainer } from 'react-hot-loader'
+// import { AppContainer } from 'react-hot-loader'
+
 
 /*
   Main App CSS
@@ -19,25 +18,4 @@ import './../stylesheets/main.css'
  */
 import App from './containers/App/App'
 
-const reactContainer = document.getElementById('reactContainer')
-
-render(
-  <AppContainer>
-    <App />
-  </AppContainer>,
-  reactContainer
-)
-
-// Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept(() => {
-    const NextApp = require<{default: typeof App}>('./containers/App/App').default
-    render(
-      <AppContainer>
-        <NextApp />
-      </AppContainer>
-      ,
-      reactContainer
-    )
-  })
-}
+render(<App />, document.getElementById('reactContainer'))
