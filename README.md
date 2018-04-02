@@ -3,11 +3,11 @@ Use this Starter template to create quickly first scaffolding for your SPA proje
 If you like to don't forget to ★ on Github.
 
 ## Features
-- [React 15.6.1](https://facebook.github.io/react)
-- [TypeScript 2.5](https://www.typescriptlang.org) (compiling directly to ES5)
+- [React](https://facebook.github.io/react)
+- [TypeScript](https://www.typescriptlang.org) (compiling directly to ES5)
   - Using [@types instead of TSD or typings folder](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/tsconfig.json#L43)
-- [Hot Module Replacement](https://medium.com/@dan_abramov/hot-reloading-in-react-1140438583bf#.xh6v0ht7j) ([React Hot Loader 3](https://github.com/gaearon/react-hot-loader/issues/243))
-- [Webpack 2](https://webpack.js.org)
+- [Hot Module Replacement](https://medium.com/@dan_abramov/hot-reloading-in-react-1140438583bf#.xh6v0ht7j) ([React Hot Loader](https://github.com/gaearon/react-hot-loader/issues/243))
+- [Webpack](https://webpack.js.org)
     - [Webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
     - [Webpack configuration for HMR](https://webpack.js.org/concepts/hot-module-replacement/)
     - Webpack production configuration
@@ -43,7 +43,7 @@ If you like to don't forget to ★ on Github.
               - "css.validate": false,
               - "stylelint.enable": true
 - Testing
-  - [Jest 21.1.0](https://facebook.github.io/jest/): testing framework
+  - [Jest](https://facebook.github.io/jest/): testing framework
   - Enzyme: helper for testing react components
     - enzime-to-json: display snapshots correctly with jest and enzyme
   - identity-obj-proxy: mock css files when testing
