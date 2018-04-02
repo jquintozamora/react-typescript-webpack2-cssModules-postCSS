@@ -17,10 +17,10 @@ indent_style = space
 
 # some files use 4 spaces for indentation
 [*.{js,jsx,ts,tsx,xml}]
-indent_size = 4
+indent_size = 2
 
 [tsconfig.json]
-indent_size = 4
+indent_size = 2
 
 # Ignore paths
 [/node_modules/**]
