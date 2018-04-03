@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/jquintozamora/react-typescript-webpack2-cssModules-postCSS.svg?branch=master)](https://travis-ci.org/jquintozamora/react-typescript-webpack2-cssModules-postCSS)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jquintozamora/react-typescript-webpack2-cssModules-postCSS.svg)](https://greenkeeper.io/)
 
 # Simple Starter Template for React, TypeScript, postCSS, ITCSS, CSS-Modules, Webpack 2 and Live Reloading (React Hot Loader 3)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/jquintozamora/react-typescript-webpack2-cssModules-postCSS.svg)](https://greenkeeper.io/)
 Use this Starter template to create quickly first scaffolding for your SPA project.
 If you like to don't forget to ★ on Github.
 
