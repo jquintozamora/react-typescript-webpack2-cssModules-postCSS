@@ -73,7 +73,7 @@
     "source-map-loader": "0.2.3",
     "style-loader": "0.20.3",
     "stylelint": "9.2.0",
-    "ts-jest": "22.4.2",
+    "ts-jest": "22.4.3",
     "ts-loader": "4.1.0",
     "tslint": "5.9.1",
     "tslint-react": "3.5.1",
