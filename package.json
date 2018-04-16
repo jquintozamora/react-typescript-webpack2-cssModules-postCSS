@@ -52,7 +52,7 @@
     "@types/node": "9.6.5",
     "@types/react-hot-loader": "3.0.6",
     "@types/webpack-env": "1.13.5",
-    "autoprefixer": "8.2.0",
+    "autoprefixer": "8.3.0",
     "compression-webpack-plugin": "1.1.11",
     "copy-webpack-plugin": "4.5.1",
     "css-loader": "0.28.11",
