@@ -12,7 +12,7 @@ class ViewerItem extends React.Component<IViewerItemProps, {}> {
         const finalTitle: string = (title.length > titleMaxWords) ? title.substring(0, titleMaxWords).concat('...') : title
 
         // Get JS Styles
-        const InlineStyles = ViewerItemCardTypeStyles(typeSingleton)
+        const InlineStyles: any = ViewerItemCardTypeStyles(typeSingleton)
 
         return (
             <table
