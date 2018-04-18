@@ -68,7 +68,7 @@
     "postcss-import": "11.1.0",
     "postcss-loader": "2.1.4",
     "postcss-nesting": "4.2.1",
-    "react-hot-loader": "4.0.1",
+    "react-hot-loader": "4.1.0",
     "react-test-renderer": "16.3.2",
     "source-map-loader": "0.2.3",
     "style-loader": "0.20.3",
