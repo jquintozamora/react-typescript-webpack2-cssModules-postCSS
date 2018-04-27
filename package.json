@@ -40,7 +40,7 @@
     "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --config ./webpack/webpack.config.js"
   },
   "dependencies": {
-    "@types/react": "16.3.11",
+    "@types/react": "16.3.12",
     "@types/react-dom": "16.0.4",
     "moment": "2.22.1",
     "react": "16.3.2",
@@ -49,7 +49,7 @@
   "devDependencies": {
     "@types/enzyme": "3.1.10",
     "@types/jest": "22.2.2",
-    "@types/node": "9.6.5",
+    "@types/node": "9.6.6",
     "@types/react-hot-loader": "3.0.6",
     "@types/webpack-env": "1.13.5",
     "autoprefixer": "8.3.0",
@@ -67,13 +67,13 @@
     "postcss-custom-properties": "7.0.0",
     "postcss-import": "11.1.0",
     "postcss-loader": "2.1.4",
-    "postcss-nesting": "4.2.1",
+    "postcss-nesting": "5.0.0",
     "react-hot-loader": "4.1.1",
     "react-test-renderer": "16.3.2",
     "source-map-loader": "0.2.3",
     "style-loader": "0.21.0",
     "stylelint": "9.2.0",
-    "ts-jest": "22.4.3",
+    "ts-jest": "22.4.4",
     "ts-loader": "4.1.0",
     "tslint": "5.9.1",
     "tslint-react": "3.5.1",
@@ -82,7 +82,7 @@
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "4.6.0",
     "webpack-bundle-analyzer": "2.11.1",
-    "webpack-cli": "2.0.14",
+    "webpack-cli": "2.0.15",
     "webpack-dev-server": "3.1.1",
     "webpack-merge": "4.1.2",
     "webpack-visualizer-plugin": "0.1.11"
