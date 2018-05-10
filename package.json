@@ -49,7 +49,7 @@
   "devDependencies": {
     "@types/enzyme": "3.1.10",
     "@types/jest": "22.2.2",
-    "@types/node": "10.0.3",
+    "@types/node": "10.0.7",
     "@types/react-hot-loader": "4.1.0",
     "@types/webpack-env": "1.13.5",
     "autoprefixer": "8.4.1",
