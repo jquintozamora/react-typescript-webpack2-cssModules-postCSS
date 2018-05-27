@@ -13,3 +13,6 @@ build/*
 
 # Stats
 dist/stats/*
+
+# Coverage
+coverage
