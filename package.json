@@ -44,7 +44,7 @@
     "@types/react-dom": "16.0.4",
     "moment": "2.22.1",
     "react": "16.4.0",
-    "react-dom": "16.3.2"
+    "react-dom": "16.4.0"
   },
   "devDependencies": {
     "@types/enzyme": "3.1.10",
