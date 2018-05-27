@@ -36,6 +36,7 @@
     "build:prod:stats": "npm run build -- --progress --profile --json > ./dist/stats/stats.json",
     "build": "webpack --mode production --config ./webpack/webpack.config.js --env.env=prod",
     "test": "jest --env=jsdom",
+    "test:coverage": "npm run test && codecov --token=700afad4-77fd-4af9-83b4-dd59f4d87e26",
     "debug:prod": "npm run debug -- --env.env=prod",
     "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --config ./webpack/webpack.config.js"
   },
@@ -43,16 +44,17 @@
     "@types/react": "16.3.12",
     "@types/react-dom": "16.0.4",
     "moment": "2.22.1",
-    "react": "16.3.2",
-    "react-dom": "16.3.2"
+    "react": "16.4.0",
+    "react-dom": "16.4.0"
   },
   "devDependencies": {
     "@types/enzyme": "3.1.10",
     "@types/jest": "22.2.2",
-    "@types/node": "10.0.10",
+    "@types/node": "10.1.3",
     "@types/react-hot-loader": "4.1.0",
     "@types/webpack-env": "1.13.5",
-    "autoprefixer": "8.5.0",
+    "autoprefixer": "8.5.1",
+    "codecov": "3.0.2",
     "compression-webpack-plugin": "1.1.11",
     "copy-webpack-plugin": "4.5.1",
     "css-loader": "0.28.11",
@@ -69,7 +71,7 @@
     "postcss-loader": "2.1.5",
     "postcss-nesting": "5.0.0",
     "react-hot-loader": "4.2.0",
-    "react-test-renderer": "16.3.2",
+    "react-test-renderer": "16.4.0",
     "source-map-loader": "0.2.3",
     "style-loader": "0.21.0",
     "stylelint": "9.2.1",
@@ -79,9 +81,9 @@
     "tslint-react": "3.5.1",
     "typescript": "2.8.1",
     "typings-for-css-modules-loader": "1.7.0",
-    "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "4.8.3",
-    "webpack-bundle-analyzer": "2.13.0",
+    "uglifyjs-webpack-plugin": "1.2.4",
+    "webpack": "4.9.0",
+    "webpack-bundle-analyzer": "2.13.1",
     "webpack-cli": "2.1.4",
     "webpack-dev-server": "3.1.4",
     "webpack-merge": "4.1.2",
@@ -109,6 +111,9 @@
     ],
     "setupFiles": [
       "<rootDir>/test/setup/setupTests.ts"
-    ]
+    ],
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
