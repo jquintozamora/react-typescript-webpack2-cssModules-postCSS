@@ -12,7 +12,7 @@ class ViewerItem extends React.Component<IViewerItemProps, {}> {
     const finalTitle: string = (title.length > titleMaxWords) ? title.substring(0, titleMaxWords).concat('...') : title
 
     // Get JS Styles
-    const InlineStyles: any = ViewerItemCardTypeStyles(typeSingleton)
+    const InlineStyles: any = typeof ViewerItemCardTypeStyles === 'function' && ViewerItemCardTypeStyles(typeSingleton)
 
     return (
       <table
@@ -21,7 +21,7 @@ class ViewerItem extends React.Component<IViewerItemProps, {}> {
         cellSpacing={0}
         cellPadding={0}
         // width="100%"
-        style={InlineStyles.table}
+        style={InlineStyles && InlineStyles.table}
       >
         <tbody>
           <tr>
@@ -29,19 +29,19 @@ class ViewerItem extends React.Component<IViewerItemProps, {}> {
               <img
                 src={imageSrc}
                 aria-hidden='true'
-                width={InlineStyles.img.maxWidth}
-                height={InlineStyles.img.height}
+                width={InlineStyles && InlineStyles.img.maxWidth}
+                height={InlineStyles && InlineStyles.img.height}
                 alt='alt_text'
                 className='center-on-narrow'
-                style={InlineStyles.img}
+                style={InlineStyles && InlineStyles.img}
               />
             </td>
           </tr>
           <tr>
-            <td style={InlineStyles.title.td} >
+            <td style={InlineStyles && InlineStyles.title.td} >
               <a
                 target='_blank'
-                style={InlineStyles.title.a}
+                style={InlineStyles && InlineStyles.title.a}
                 href={linkUrl}
               >
                 {finalTitle}
@@ -49,12 +49,12 @@ class ViewerItem extends React.Component<IViewerItemProps, {}> {
             </td>
           </tr>
           <tr>
-            <td style={InlineStyles.date} >
+            <td style={InlineStyles && InlineStyles.date} >
               {date}
             </td>
           </tr>
           <tr>
-            <td style={InlineStyles.summary} >
+            <td style={InlineStyles && InlineStyles.summary} >
               {finalSummary}
             </td>
           </tr>

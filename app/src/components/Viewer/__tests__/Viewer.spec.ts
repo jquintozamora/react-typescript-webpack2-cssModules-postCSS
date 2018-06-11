@@ -2,14 +2,14 @@ import testComponentHelper from '../../../../../test/unit/helpers/ComponentHelpe
 import Viewer from '../Viewer'
 
 describe('<Viewer />', () => {
-    const initialProps = {
-        className: ''
-    }
-    const renderComponent = testComponentHelper(Viewer)
-    describe('@renders', () => {
-        it('in default state', () => {
-            expect(renderComponent().getHtml())
-                .toMatchSnapshot()
-        })
+  const initialProps = {
+    className: ''
+  }
+  const renderComponent = testComponentHelper(Viewer)
+  describe('@renders', () => {
+    it('in default state', () => {
+      expect(renderComponent().getHtml())
+        .toMatchSnapshot()
     })
+  })
 })

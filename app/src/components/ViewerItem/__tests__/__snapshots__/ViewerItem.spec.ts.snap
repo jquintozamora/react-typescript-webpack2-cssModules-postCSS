@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ViewerItem /> @renders in default state 1`] = `
+<table
+  aria-hidden="true"
+  cellPadding={0}
+  cellSpacing={0}
+  role="presentation"
+  style={false}
+>
+  <tbody>
+    <tr>
+      <td>
+        <img
+          alt="alt_text"
+          aria-hidden="true"
+          className="center-on-narrow"
+          height={false}
+          src="http://pipsum.com/900x450.jpg"
+          style={false}
+          width={false}
+        />
+      </td>
+    </tr>
+    <tr>
+      <td
+        style={false}
+      >
+        <a
+          href="https://blog.josequinto.com/"
+          style={false}
+          target="_blank"
+        >
+          Lorem ipsum dolor sit amet, consect...
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td
+        style={false}
+      />
+    </tr>
+    <tr>
+      <td
+        style={false}
+      >
+        Lorem ipsum dolor site amet, consectetur adipiscing elit. Duis at purus nibh. Cras metus nulla, vestibulum in aucto...
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
