@@ -7,7 +7,6 @@
   background-color: var(--secondaryBackground);
 }
 
-
 /*
   Exports the variable to be exposed in CSS Modules (styles object in React)
 */

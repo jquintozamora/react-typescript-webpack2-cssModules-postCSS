@@ -1,3 +1,3 @@
 export interface IAsyncLoadingState {
-    time: string
+  time: string
 }

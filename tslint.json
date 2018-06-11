@@ -1,34 +1,69 @@
 {
-  "extends": ["tslint:latest", "tslint-react"],
+  "extends": [
+    "tslint:latest",
+    "tslint-react"
+  ],
   "rules": {
-    "ban": [true,
-      ["Object", "assign", "use TS2.1 object spread { ...a, ...b }"],
-      ["describe", "only"],
-      ["it", "only"]
+    "ban": [
+      true,
+      [
+        "Object",
+        "assign",
+        "use TS2.1 object spread { ...a, ...b }"
+      ],
+      [
+        "describe",
+        "only"
+      ],
+      [
+        "it",
+        "only"
+      ]
     ],
-    "linebreak-style": [true, "LF"],
-    "no-invalid-this": [true, "check-function-in-method"],
+    "linebreak-style": [
+      true,
+      "LF"
+    ],
+    "no-invalid-this": [
+      true,
+      "check-function-in-method"
+    ],
     "variable-name": [
-        "ban-keywords",
-        "check-format",
-        "allow-leading-underscore",
-        "allow-pascal-case"
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
     ],
     "trailing-comma": [
       false
     ],
-    "max-line-length": [ 180 ],
-    "max-classes-per-file": [true, 5],
+    "no-console": false,
+    "no-shadowed-variable": false,
+    "max-line-length": [
+      180
+    ],
+    "max-classes-per-file": [
+      true,
+      5
+    ],
     "object-literal-sort-keys": false,
     "jsx-no-multiline-js": false,
     "ordered-imports": [
       false
     ],
-    "semicolon": [true, "never"],
-    "quotemark": [true, "single"]
+    "semicolon": [
+      true,
+      "never"
+    ],
+    "quotemark": [
+      true,
+      "single"
+    ]
   },
   "jsRules": {
     "object-literal-shorthand": true,
-    "trailing-comma": [false]
+    "trailing-comma": [
+      false
+    ]
   }
 }
