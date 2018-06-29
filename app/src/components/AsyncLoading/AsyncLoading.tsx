@@ -1,27 +1,26 @@
-import * as React from 'react'
-import * as styles from './AsyncLoading.module.css'
-import { IAsyncLoadingState } from './IAsyncLoadingState'
+import * as React from "react";
+import * as styles from "./AsyncLoading.module.css";
+import { IAsyncLoadingState } from "./IAsyncLoadingState";
 
 /* tslint:disable */
 // Source: https://gist.github.com/Kovensky/e2ceb3b9715c4e2ddba3ae36e9abfb05
 interface System {
   // Lazy Loading
-  import<T>(module: string): Promise<T>
+  import<T>(module: string): Promise<T>;
 }
 declare var System: System;
 /* tslint:enable */
 
 // the 'moment' static import is only used for its types so typescript deletes it
-import * as moment from 'moment'
+import * as moment from "moment";
 
 class AsyncLoading extends React.Component<{}, IAsyncLoadingState> {
-
+  // Default State values
+  public readonly state: IAsyncLoadingState = {
+    time: "No time"
+  };
   constructor(props: any, context: any) {
-    super(props, context)
-    // Default State values
-    this.state = {
-      time: 'No time'
-    }
+    super(props, context);
   }
 
   public render() {
@@ -30,7 +29,7 @@ class AsyncLoading extends React.Component<{}, IAsyncLoadingState> {
         <button onClick={this.lazyLoadingMomentJs}>Lazy Load momentjs</button>
         <div>{this.state.time}</div>
       </div>
-    )
+    );
   }
 
   private loadingMomentJs = () => {
@@ -39,30 +38,29 @@ class AsyncLoading extends React.Component<{}, IAsyncLoadingState> {
     // const time = moment().format();
     // console.log(time);
     // this.setState({ time });
-  }
+  };
 
   private lazyLoadingMomentJs = async () => {
-
     // TypeScript >= 2.4.0 with async await
-    const momentAsync = await import(/* webpackChunkName: "momentjs" */ 'moment')
-    const timeAsync = (momentAsync as any).default().format()
-    console.log('TypeScript >= 2.4.0 with async await:')
-    console.log(timeAsync)
-    this.setState({ time: timeAsync })
+    const momentAsync = await import(/* webpackChunkName: "momentjs" */ "moment");
+    const timeAsync = (momentAsync as any).default().format();
+    console.log("TypeScript >= 2.4.0 with async await:");
+    console.log(timeAsync);
+    this.setState({ time: timeAsync });
 
     // TypeScript >= 2.4.0 with then, catch
-    import(/* webpackChunkName: "momentjs" */ 'moment')
-      .then((moment) => {
+    import(/* webpackChunkName: "momentjs" */ "moment")
+      .then(moment => {
         // lazyModule has all of the proper types, autocomplete works,
         // type checking works, code references work \o/
-        const time = (moment as any).default().format()
-        console.log('TypeScript >= 2.4.0 with then, catch:')
-        console.log(time)
-        this.setState({ time })
+        const time = (moment as any).default().format();
+        console.log("TypeScript >= 2.4.0 with then, catch:");
+        console.log(time);
+        this.setState({ time });
       })
-      .catch((err) => {
-        console.log('Failed to load moment', err)
-      })
+      .catch(err => {
+        console.log("Failed to load moment", err);
+      });
 
     // TypeScript < 2.4 workaround
     // if we use moment inside System.import then we will use lazy loading
@@ -78,7 +76,7 @@ class AsyncLoading extends React.Component<{}, IAsyncLoadingState> {
     //     .catch((err) => {
     //         console.log('Failed to load moment', err)
     //     })
-  }
+  };
 }
 
-export default AsyncLoading
+export default AsyncLoading;
