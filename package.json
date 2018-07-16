@@ -55,7 +55,7 @@
     "react-dom": "16.4.1"
   },
   "devDependencies": {
-    "@types/enzyme": "3.1.11",
+    "@types/enzyme": "3.1.12",
     "@types/jest": "23.1.6",
     "@types/node": "10.5.2",
     "@types/react-hot-loader": "4.1.0",
