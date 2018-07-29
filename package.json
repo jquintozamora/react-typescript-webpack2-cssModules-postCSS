@@ -127,6 +127,7 @@
     "setupFiles": [
       "<rootDir>/test/setup/setupTests.ts"
     ],
+    "testURL": "http://localhost",
     "testEnvironment": "node",
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
