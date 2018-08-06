@@ -60,7 +60,7 @@
     "@types/node": "10.5.6",
     "@types/react-hot-loader": "4.1.0",
     "@types/webpack-env": "1.13.6",
-    "autoprefixer": "9.0.2",
+    "autoprefixer": "9.1.0",
     "codecov": "3.0.4",
     "compression-webpack-plugin": "1.1.11",
     "copy-webpack-plugin": "4.5.2",
