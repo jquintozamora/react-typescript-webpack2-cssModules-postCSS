@@ -82,7 +82,7 @@
     "react-hot-loader": "4.3.4",
     "react-test-renderer": "16.4.2",
     "source-map-loader": "0.2.3",
-    "style-loader": "0.21.0",
+    "style-loader": "0.22.0",
     "stylelint": "9.4.0",
     "ts-jest": "23.0.1",
     "ts-loader": "4.4.2",
