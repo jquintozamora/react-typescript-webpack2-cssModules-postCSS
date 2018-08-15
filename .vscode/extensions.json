@@ -6,6 +6,7 @@
     "EditorConfig.EditorConfig",
     "eg2.tslint",
     "shinnn.stylelint",
-    "mrmlnc.vscode-stylefmt"
+    "mrmlnc.vscode-stylefmt",
+    "esbenp.prettier-vscode"
   ]
 }

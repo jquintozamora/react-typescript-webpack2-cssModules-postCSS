@@ -1,6 +1,4 @@
-const WebpackBundleAnalzyer = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
+const WebpackBundleAnalzyer = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 module.exports = {
-    plugins: [
-        new WebpackBundleAnalzyer()
-    ]
-}
+  plugins: [new WebpackBundleAnalzyer()]
+};

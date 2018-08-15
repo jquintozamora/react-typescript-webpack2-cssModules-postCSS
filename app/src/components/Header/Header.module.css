@@ -1,8 +1,8 @@
-@import '../../../stylesheets/1_Settings/_settings.colors.css';
+@import "../../../stylesheets/1_Settings/_settings.colors.css";
 
 .header {
   text-align: center;
-  font-size: .8em;
+  font-size: 0.8em;
   padding-bottom: 1px;
   background-color: var(--secondaryBackground);
 }

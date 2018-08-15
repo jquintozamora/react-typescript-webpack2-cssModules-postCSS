@@ -5,9 +5,9 @@
 /////////////////////////////////////////////////////////
 
 const commonPaths = require("./common-paths");
-const webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
@@ -18,7 +18,7 @@ module.exports = {
   // To enhance the debugging process. More info: https://webpack.js.org/configuration/devtool/
   // We generate sourcemaps in production. This is slow but gives good results.
   // You can exclude the *.map files from the build during deployment.
-  devtool: 'source-map',
+  devtool: "source-map",
 
   optimization: {
     minimize: true,
@@ -52,7 +52,7 @@ module.exports = {
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
       inject: true,
-      template: commonPaths.contentBasePath + '/index.html',
+      template: commonPaths.contentBasePath + "/index.html",
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -63,18 +63,18 @@ module.exports = {
         keepClosingSlash: true,
         minifyJS: true,
         minifyCSS: true,
-        minifyURLs: true,
-      },
+        minifyURLs: true
+      }
     }),
     new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')      // Reduces 78 kb on React library
+      "process.env": {
+        NODE_ENV: JSON.stringify("production") // Reduces 78 kb on React library
       },
-      'DEBUG': false,                                 // Doesn´t have effect on my example
-      '__DEVTOOLS__': false                           // Doesn´t have effect on my example
+      DEBUG: false, // Doesn´t have effect on my example
+      __DEVTOOLS__: false // Doesn´t have effect on my example
     }),
     new MiniCssExtractPlugin({
-      filename: 'static/css/main.css',
+      filename: "static/css/main.css",
       allChunks: true
     }),
     new CompressionWebpackPlugin({
@@ -92,19 +92,17 @@ module.exports = {
     rules: [
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       {
-        enforce: 'pre',
+        enforce: "pre",
         test: /\.js$/,
-        loader: 'source-map-loader',
-        exclude: [
-          '/node_modules/'
-        ]
+        loader: "source-map-loader",
+        exclude: ["/node_modules/"]
       },
       // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
       {
         test: /\.ts(x?)$/,
         use: [
           {
-            loader: 'ts-loader',
+            loader: "ts-loader",
             options: {
               happyPackMode: true // IMPORTANT! use happyPackMode mode to speed-up compilation and reduce errors reported to webpack
             }
@@ -115,11 +113,11 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        include: commonPaths.stylesheetsPath,  // Use include instead exclude to improve the build performance
+        include: commonPaths.stylesheetsPath, // Use include instead exclude to improve the build performance
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               sourceMap: true,
               importLoaders: 1,
@@ -127,7 +125,7 @@ module.exports = {
             }
           },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               sourceMap: true,
               plugins: () => [
@@ -137,7 +135,7 @@ module.exports = {
                 require("postcss-custom-properties")(),
                 //https://github.com/ai/browserslist
                 require("autoprefixer")({
-                  browsers: ['last 2 versions', 'ie >= 9']
+                  browsers: ["last 2 versions", "ie >= 9"]
                 })
               ]
             }
@@ -150,36 +148,36 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'typings-for-css-modules-loader',
+            loader: "typings-for-css-modules-loader",
             options: {
               sourceMap: true,
               importLoaders: 1,
               modules: true,
               camelCase: true,
-              localIdentName: '[name]_[local]_[hash:base64:5]',
+              localIdentName: "[name]_[local]_[hash:base64:5]",
               minimize: false,
               namedExport: true
-            },
+            }
           },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
-              plugins: () => ([
+              plugins: () => [
                 require("postcss-import")(),
                 // Following CSS Nesting Module Level 3: http://tabatkins.github.io/specs/css-nesting/
                 require("postcss-nesting")(),
                 require("postcss-custom-properties")(),
                 //https://github.com/ai/browserslist
                 require("autoprefixer")({
-                  browsers: ['last 2 versions', 'ie >= 9']
+                  browsers: ["last 2 versions", "ie >= 9"]
                 })
-              ])
+              ]
             }
           }
         ]
       }
     ]
-  },
+  }
   // When importing a module whose path matches one of the following, just
   // assume a corresponding global variable exists and use that instead.
   // This is important because it allows us to avoid bundling all of our
