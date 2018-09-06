@@ -62,7 +62,7 @@
     "@types/webpack-env": "1.13.6",
     "autoprefixer": "9.1.2",
     "codecov": "3.1.0",
-    "compression-webpack-plugin": "1.1.11",
+    "compression-webpack-plugin": "2.0.0",
     "copy-webpack-plugin": "4.5.2",
     "css-loader": "1.0.0",
     "enzyme": "3.6.0",
