@@ -95,7 +95,7 @@
     "webpack": "4.17.2",
     "webpack-bundle-analyzer": "2.13.1",
     "webpack-cli": "3.1.0",
-    "webpack-dev-server": "3.1.5",
+    "webpack-dev-server": "3.1.6",
     "webpack-merge": "4.1.4",
     "webpack-visualizer-plugin": "0.1.11"
   },
