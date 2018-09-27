@@ -112,7 +112,9 @@ module.exports = {
                   //addDependencyTo: webpack // Must be first item in list
                 }),
                 require("postcss-nesting")(), // Following CSS Nesting Module Level 3: http://tabatkins.github.io/specs/css-nesting/
-                require("postcss-custom-properties")(),
+                require("postcss-custom-properties")({
+                  preserve: false
+                }),
                 require("autoprefixer")({
                   browsers: ["last 2 versions", "ie >= 9"] //https://github.com/ai/browserslist
                 })
@@ -148,7 +150,9 @@ module.exports = {
                 require("postcss-import")(),
                 // Following CSS Nesting Module Level 3: http://tabatkins.github.io/specs/css-nesting/
                 require("postcss-nesting")(),
-                require("postcss-custom-properties")(),
+                require("postcss-custom-properties")({
+                  preserve: false
+                }),
                 //https://github.com/ai/browserslist
                 require("autoprefixer")({
                   browsers: ["last 2 versions", "ie >= 9"]
