@@ -89,7 +89,7 @@
     "tslint": "5.11.0",
     "tslint-config-prettier": "1.15.0",
     "tslint-react": "3.6.0",
-    "typescript": "3.1.1",
+    "typescript": "3.1.6",
     "typings-for-css-modules-loader": "1.7.0",
     "uglifyjs-webpack-plugin": "2.0.1",
     "webpack": "4.23.0",
