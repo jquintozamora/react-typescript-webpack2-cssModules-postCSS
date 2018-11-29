@@ -61,7 +61,7 @@
     "@storybook/addon-knobs": "4.1.0-alpha.8",
     "@storybook/react": "4.1.0-alpha.8",
     "@types/enzyme": "3.1.15",
-    "@types/jest": "23.3.9",
+    "@types/jest": "23.3.10",
     "@types/node": "10.12.10",
     "@types/react-hot-loader": "4.1.0",
     "@types/storybook__addon-info": "3.4.2",
