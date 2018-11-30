@@ -49,7 +49,7 @@
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
-    "@types/react": "16.7.8",
+    "@types/react": "16.7.9",
     "@types/react-dom": "16.0.11",
     "moment": "2.22.2",
     "react": "16.6.3",
