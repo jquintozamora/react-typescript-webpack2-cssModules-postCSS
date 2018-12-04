@@ -56,7 +56,7 @@
     "react-dom": "16.6.3"
   },
   "devDependencies": {
-    "@babel/core": "7.1.6",
+    "@babel/core": "7.2.0",
     "@storybook/addon-info": "4.1.0-alpha.8",
     "@storybook/addon-knobs": "4.1.0-alpha.8",
     "@storybook/react": "4.1.0-alpha.8",
