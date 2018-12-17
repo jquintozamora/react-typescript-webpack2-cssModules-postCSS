@@ -58,7 +58,7 @@
   "devDependencies": {
     "@babel/core": "7.2.0",
     "@storybook/addon-info": "4.1.0-alpha.12",
-    "@storybook/addon-knobs": "4.1.0-alpha.8",
+    "@storybook/addon-knobs": "4.1.2",
     "@storybook/react": "4.1.0-alpha.12",
     "@types/enzyme": "3.1.15",
     "@types/jest": "23.3.10",
