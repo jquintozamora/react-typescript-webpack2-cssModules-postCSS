@@ -99,8 +99,7 @@ module.exports = {
             loader: "css-loader",
             options: {
               sourceMap: true,
-              importLoaders: 1,
-              minimize: true
+              importLoaders: 1
             }
           },
           {
@@ -139,7 +138,6 @@ module.exports = {
               modules: true,
               camelCase: true,
               localIdentName: "[name]_[local]_[hash:base64:5]",
-              minimize: false,
               namedExport: true
             }
           },

@@ -155,7 +155,6 @@ module.exports = {
               modules: true,
               camelCase: true,
               localIdentName: "[name]_[local]_[hash:base64:5]",
-              minimize: false,
               namedExport: true
             }
           },
