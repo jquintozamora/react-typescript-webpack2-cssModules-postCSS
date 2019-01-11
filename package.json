@@ -93,7 +93,7 @@
     "typescript": "3.2.2",
     "typings-for-css-modules-loader": "1.7.0",
     "uglifyjs-webpack-plugin": "2.1.1",
-    "webpack": "4.28.3",
+    "webpack": "4.28.4",
     "webpack-bundle-analyzer": "3.0.3",
     "webpack-cli": "3.1.2",
     "webpack-dev-server": "3.1.10",
