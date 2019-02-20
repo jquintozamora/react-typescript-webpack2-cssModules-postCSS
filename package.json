@@ -61,7 +61,7 @@
     "@types/node": "11.9.3",
     "@types/react-hot-loader": "4.1.0",
     "@types/webpack-env": "1.13.6",
-    "autoprefixer": "9.4.4",
+    "autoprefixer": "9.4.8",
     "codecov": "3.1.0",
     "compression-webpack-plugin": "2.0.0",
     "copy-webpack-plugin": "4.6.0",
