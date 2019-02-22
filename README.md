@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/jquintozamora/react-typescript-webpack2-cssModules-postCSS.svg?branch=master)](https://travis-ci.org/jquintozamora/react-typescript-webpack2-cssModules-postCSS)
- [![Greenkeeper badge](https://badges.greenkeeper.io/jquintozamora/react-typescript-webpack2-cssModules-postCSS.svg)](https://greenkeeper.io/)
+ [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=jquintozamora/react-typescript-webpack2-cssModules-postCSS&identifier=80755170)](https://dependabot.com)
  [![codecov](https://codecov.io/gh/jquintozamora/react-typescript-webpack2-cssModules-postCSS/branch/master/graph/badge.svg)](https://codecov.io/gh/jquintozamora/react-typescript-webpack2-cssModules-postCSS)
 
 # Simple Starter Template for React, TypeScript, postCSS, ITCSS, CSS-Modules, Webpack 2 and Live Reloading (React Hot Loader 3)
