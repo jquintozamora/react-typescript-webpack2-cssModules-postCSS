@@ -131,14 +131,13 @@ module.exports = {
             loader: "style-loader"
           },
           {
-            loader: "typings-for-css-modules-loader",
+            loader: "css-loader",
             options: {
               sourceMap: true,
               importLoaders: 1,
               modules: true,
               camelCase: true,
-              localIdentName: "[name]_[local]_[hash:base64:5]",
-              namedExport: true
+              localIdentName: "[name]_[local]_[hash:base64:5]"
             }
           },
           {

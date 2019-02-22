@@ -27,8 +27,8 @@
     "url": "git://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS.git"
   },
   "engines": {
-    "npm": "6.1.0",
-    "node": "8.11.3"
+    "npm": "6.4.1",
+    "node": "10.15.1"
   },
   "scripts": {
     "start": "node --harmony ./scripts/start.js",
@@ -45,26 +45,26 @@
     "precommit": "lint-staged",
     "prepush": "npm run test",
     "debug:prod": "npm run debug -- --env.env=prod",
-    "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --config ./webpack/webpack.config.js",
-    "storybook": "start-storybook -p 6006"
+    "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --config ./webpack/webpack.config.js"
   },
   "dependencies": {
-    "@types/react": "16.7.18",
+    "@types/react": "16.8.4",
     "@types/react-dom": "16.8.2",
     "moment": "2.24.0",
-    "react": "16.8.2",
+    "react": "16.8.3",
     "react-dom": "16.8.3"
   },
   "devDependencies": {
-    "@types/enzyme": "3.1.15",
-    "@types/jest": "23.3.12",
-    "@types/node": "11.9.3",
+    "@types/enzyme": "3.1.18",
+    "@types/jest": "24.0.6",
+    "@types/node": "11.9.4",
     "@types/react-hot-loader": "4.1.0",
-    "@types/webpack-env": "1.13.6",
+    "@types/webpack-env": "1.13.7",
+    "acorn": "6.1.0",
     "autoprefixer": "9.4.8",
-    "codecov": "3.1.0",
+    "codecov": "3.2.0",
     "compression-webpack-plugin": "2.0.0",
-    "copy-webpack-plugin": "4.6.0",
+    "copy-webpack-plugin": "5.0.0",
     "css-loader": "2.1.0",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.9.1",
@@ -81,17 +81,16 @@
     "postcss-loader": "3.0.0",
     "postcss-nesting": "7.0.0",
     "react-hot-loader": "4.7.1",
-    "react-test-renderer": "16.8.2",
+    "react-test-renderer": "16.8.3",
     "source-map-loader": "0.2.4",
     "style-loader": "0.23.1",
-    "stylelint": "9.10.0",
+    "stylelint": "9.10.1",
     "ts-jest": "24.0.0",
     "ts-loader": "5.3.3",
-    "tslint": "5.12.0",
+    "tslint": "5.12.1",
     "tslint-config-prettier": "1.18.0",
     "tslint-react": "3.6.0",
     "typescript": "3.3.3333",
-    "typings-for-css-modules-loader": "1.7.0",
     "uglifyjs-webpack-plugin": "2.1.1",
     "webpack": "4.29.5",
     "webpack-bundle-analyzer": "3.0.4",
