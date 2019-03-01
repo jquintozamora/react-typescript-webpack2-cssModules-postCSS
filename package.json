@@ -60,7 +60,7 @@
     "@types/node": "11.9.5",
     "@types/react-hot-loader": "4.1.0",
     "@types/webpack-env": "1.13.7",
-    "acorn": "6.1.0",
+    "acorn": "6.1.1",
     "autoprefixer": "9.4.8",
     "codecov": "3.2.0",
     "compression-webpack-plugin": "2.0.0",
