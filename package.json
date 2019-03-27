@@ -64,7 +64,7 @@
     "autoprefixer": "9.5.0",
     "codecov": "3.2.0",
     "compression-webpack-plugin": "2.0.0",
-    "copy-webpack-plugin": "5.0.1",
+    "copy-webpack-plugin": "5.0.2",
     "css-loader": "2.1.1",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.11.2",
