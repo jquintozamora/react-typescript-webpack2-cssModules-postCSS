@@ -48,7 +48,7 @@
     "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --config ./webpack/webpack.config.js"
   },
   "dependencies": {
-    "@types/react": "16.8.8",
+    "@types/react": "16.8.10",
     "@types/react-dom": "16.8.3",
     "moment": "2.24.0",
     "react": "16.8.5",
