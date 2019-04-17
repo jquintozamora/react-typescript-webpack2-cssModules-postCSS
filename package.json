@@ -87,7 +87,7 @@
     "stylelint": "9.10.1",
     "ts-jest": "24.0.0",
     "ts-loader": "5.3.3",
-    "tslint": "5.14.0",
+    "tslint": "5.16.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-react": "4.0.0",
     "typescript": "3.3.3333",
