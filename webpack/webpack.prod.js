@@ -146,6 +146,7 @@ module.exports = {
         include: commonPaths.srcPath,
         use: [
           MiniCssExtractPlugin.loader,
+          'css-modules-typescript-loader',
           {
             loader: "css-loader",
             options: {
