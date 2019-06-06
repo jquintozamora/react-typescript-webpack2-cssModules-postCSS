@@ -63,7 +63,7 @@
     "acorn": "6.1.1",
     "autoprefixer": "9.5.1",
     "codecov": "3.5.0",
-    "compression-webpack-plugin": "2.0.0",
+    "compression-webpack-plugin": "3.0.0",
     "copy-webpack-plugin": "5.0.3",
     "css-loader": "2.1.1",
     "css-modules-typescript-loader": "2.0.3",
