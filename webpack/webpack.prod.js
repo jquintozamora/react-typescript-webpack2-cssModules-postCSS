@@ -133,9 +133,7 @@ module.exports = {
                 require("postcss-nesting")(),
                 require("postcss-custom-properties")(),
                 //https://github.com/ai/browserslist
-                require("autoprefixer")({
-                  browsers: ["last 2 versions", "ie >= 9"]
-                })
+                require("autoprefixer")()
               ]
             }
           }
@@ -152,9 +150,10 @@ module.exports = {
             options: {
               sourceMap: true,
               importLoaders: 1,
-              modules: true,
-              camelCase: true,
-              localIdentName: "[name]_[local]_[hash:base64:5]"
+              modules: {
+                localIdentName: "[name]_[local]_[hash:base64:5]"
+              },
+              localsConvention: 'camelCase',
             }
           },
           {
@@ -166,9 +165,7 @@ module.exports = {
                 require("postcss-nesting")(),
                 require("postcss-custom-properties")(),
                 //https://github.com/ai/browserslist
-                require("autoprefixer")({
-                  browsers: ["last 2 versions", "ie >= 9"]
-                })
+                require("autoprefixer")()
               ]
             }
           }

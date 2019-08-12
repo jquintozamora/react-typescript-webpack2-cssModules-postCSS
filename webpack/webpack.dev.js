@@ -114,9 +114,7 @@ module.exports = {
                 require("postcss-custom-properties")({
                   preserve: false
                 }),
-                require("autoprefixer")({
-                  browsers: ["last 2 versions", "ie >= 9"] //https://github.com/ai/browserslist
-                })
+                require("autoprefixer")()
               ]
             }
           }
@@ -136,9 +134,10 @@ module.exports = {
             options: {
               sourceMap: true,
               importLoaders: 1,
-              modules: true,
-              camelCase: true,
-              localIdentName: "[name]_[local]_[hash:base64:5]"
+              modules: {
+                localIdentName: "[name]_[local]_[hash:base64:5]"
+              },
+              localsConvention: 'camelCase',
             }
           },
           {
@@ -152,9 +151,7 @@ module.exports = {
                   preserve: false
                 }),
                 //https://github.com/ai/browserslist
-                require("autoprefixer")({
-                  browsers: ["last 2 versions", "ie >= 9"]
-                })
+                require("autoprefixer")()
               ]
             }
           }
