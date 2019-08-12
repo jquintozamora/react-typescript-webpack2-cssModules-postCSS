@@ -80,7 +80,7 @@
     "postcss-custom-properties": "8.0.10",
     "postcss-import": "12.0.1",
     "postcss-loader": "3.0.0",
-    "postcss-nesting": "7.0.0",
+    "postcss-nesting": "7.0.1",
     "react-hot-loader": "4.12.10",
     "react-test-renderer": "16.8.6",
     "source-map-loader": "0.2.4",
