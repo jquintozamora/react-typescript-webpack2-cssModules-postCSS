@@ -93,7 +93,7 @@
     "tslint-react": "4.0.0",
     "typescript": "3.5.3",
     "uglifyjs-webpack-plugin": "2.2.0",
-    "webpack": "4.39.1",
+    "webpack": "4.39.2",
     "webpack-bundle-analyzer": "3.4.1",
     "webpack-cli": "3.3.6",
     "webpack-dev-server": "3.8.0",
