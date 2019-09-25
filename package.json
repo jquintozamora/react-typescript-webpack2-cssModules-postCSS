@@ -97,7 +97,7 @@
     "webpack-bundle-analyzer": "3.4.1",
     "webpack-cli": "3.3.9",
     "webpack-dev-server": "3.8.0",
-    "webpack-merge": "4.2.1",
+    "webpack-merge": "4.2.2",
     "webpack-visualizer-plugin": "0.1.11"
   },
   "lint-staged": {
