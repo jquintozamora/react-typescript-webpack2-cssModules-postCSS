@@ -127,7 +127,7 @@ As part of the boilerplate, you will see a fancy demo app with two react compone
 ## License
 BSD 3-Clause License
 
-Copyright (c) 2017, [José Quinto](https://blog.josequinto.com)
+Copyright (c) 2019, [José Quinto](https://blog.josequinto.com)
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
