@@ -87,7 +87,7 @@
     "style-loader": "1.0.0",
     "stylelint": "10.1.0",
     "ts-jest": "24.0.2",
-    "ts-loader": "6.0.4",
+    "ts-loader": "6.1.2",
     "tslint": "5.20.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-react": "4.0.0",
