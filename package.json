@@ -85,7 +85,7 @@
     "react-test-renderer": "16.9.0",
     "source-map-loader": "0.2.4",
     "style-loader": "1.0.0",
-    "stylelint": "10.1.0",
+    "stylelint": "11.0.0",
     "ts-jest": "24.1.0",
     "ts-loader": "6.2.0",
     "tslint": "5.20.0",
