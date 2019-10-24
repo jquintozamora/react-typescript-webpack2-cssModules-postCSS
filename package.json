@@ -59,7 +59,7 @@
     "@types/jest": "24.0.18",
     "@types/node": "12.11.6",
     "@types/react-hot-loader": "4.1.0",
-    "@types/webpack-env": "1.14.0",
+    "@types/webpack-env": "1.14.1",
     "acorn": "7.1.0",
     "autoprefixer": "9.6.5",
     "codecov": "3.6.1",
