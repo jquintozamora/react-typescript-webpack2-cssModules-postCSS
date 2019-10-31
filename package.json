@@ -61,7 +61,7 @@
     "@types/react-hot-loader": "4.1.0",
     "@types/webpack-env": "1.14.1",
     "acorn": "7.1.0",
-    "autoprefixer": "9.6.5",
+    "autoprefixer": "9.7.0",
     "codecov": "3.6.1",
     "compression-webpack-plugin": "3.0.0",
     "copy-webpack-plugin": "5.0.4",
