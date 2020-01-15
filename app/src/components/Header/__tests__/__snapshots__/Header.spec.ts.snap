@@ -1,15 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> @renders in default state 1`] = `
-<header
-  className="header"
->
+<header>
   <h1>
     Hello, 
   </h1>
   <h3>
     Header background Color from PostCSS =&gt; var(--headerBackground): 
-    header_bg
   </h3>
 </header>
 `;

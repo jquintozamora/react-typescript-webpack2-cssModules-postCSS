@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as styles from "./AsyncLoading.module.css";
+import styles from "./AsyncLoading.module.css";
 import { IAsyncLoadingState } from "./IAsyncLoadingState";
 
 /* tslint:disable */

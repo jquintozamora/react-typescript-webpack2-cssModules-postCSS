@@ -1,16 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Viewer /> @renders in default state 1`] = `
-<section
-  className="container"
->
-  <div
-    className="title"
-  >
+<section>
+  <div>
     Card Types sample
   </div>
   <div
-    className="big"
+    className={[Function]}
   >
     <ViewerItem
       typeSingleton={
@@ -30,9 +26,7 @@ exports[`<Viewer /> @renders in default state 1`] = `
       }
     />
   </div>
-  <div
-    className="medium"
-  >
+  <div>
     <ViewerItem
       typeSingleton={
         ViewerItemCardType {
@@ -52,7 +46,7 @@ exports[`<Viewer /> @renders in default state 1`] = `
     />
   </div>
   <div
-    className="small"
+    className={[Function]}
   >
     <ViewerItem
       typeSingleton={

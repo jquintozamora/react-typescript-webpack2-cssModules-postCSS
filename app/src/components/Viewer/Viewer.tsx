@@ -1,6 +1,7 @@
 import * as React from "react";
 import ViewerItem from "../ViewerItem/ViewerItem";
-import * as styles from "./Viewer.module.css";
+import styles from "./Viewer.module.css";
+
 import { ViewerItemCardType } from "../ViewerItem/ViewerItemCardType";
 import { IViewerProps } from "./IViewerProps";
 

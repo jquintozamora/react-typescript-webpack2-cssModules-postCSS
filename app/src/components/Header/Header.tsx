@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as styles from "./Header.module.css";
+import styles from "./Header.module.css";
 import { IHeaderProps } from "./IHeaderProps";
 
 class Header extends React.Component<IHeaderProps, {}> {
