@@ -27,8 +27,8 @@
     "url": "git://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS.git"
   },
   "engines": {
-    "npm": "6.4.1",
-    "node": "10.15.1"
+    "npm": "6.14.11",
+    "node": "14.15.5"
   },
   "scripts": {
     "start": "node --harmony ./scripts/start.js",
@@ -46,11 +46,11 @@
     "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --config ./webpack/webpack.config.js"
   },
   "dependencies": {
-    "@types/react": "16.9.23",
-    "@types/react-dom": "16.9.5",
-    "moment": "2.24.0",
-    "react": "16.13.0",
-    "react-dom": "16.13.0"
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.1",
+    "moment": "2.29.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   },
   "devDependencies": {
     "@types/enzyme": "3.10.5",
