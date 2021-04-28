@@ -1,0 +1,65 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: react-hot-loader
+    versions:
+    - 4.13.0
+  - dependency-name: codecov
+    versions:
+    - 3.7.1
+  - dependency-name: acorn
+    versions:
+    - 7.1.1
+  - dependency-name: y18n
+    versions:
+    - 4.0.2
+  - dependency-name: typescript
+    versions:
+    - 4.2.3
+  - dependency-name: react-test-renderer
+    versions:
+    - 17.0.1
+  - dependency-name: enzyme-to-json
+    versions:
+    - 3.6.1
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.22
+    - 14.14.24
+    - 14.14.25
+    - 14.14.26
+    - 14.14.28
+  - dependency-name: stylelint
+    versions:
+    - 13.10.0
+    - 13.9.0
+  - dependency-name: webpack-cli
+    versions:
+    - 4.4.0
+    - 4.5.0
+  - dependency-name: elliptic
+    versions:
+    - 6.5.4
+  - dependency-name: webpack-bundle-analyzer
+    versions:
+    - 4.4.0
+  - dependency-name: webpack
+    versions:
+    - 4.46.0
+  - dependency-name: fork-ts-checker-webpack-plugin
+    versions:
+    - 6.1.0
+  - dependency-name: "@types/jest"
+    versions:
+    - 26.0.20
+  - dependency-name: ini
+    versions:
+    - 1.3.8
+  - dependency-name: "@types/webpack-env"
+    versions:
+    - 1.16.0
